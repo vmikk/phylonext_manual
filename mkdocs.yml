@@ -1,0 +1,32 @@
+site_name: PhyloNext
+
+site_author: Vladimir Mikryukov, Kessy Abarenkov
+site_description: A pipeline for phylogenetic diversity analysis of GBIF-mediated data.
+copyright: "Copyright © 2022 Vladimir Mikryukov, Kessy Abarenkov. All rights reserved."
+
+site_url: https://phylonext.github.io/
+repo_url: https://github.com/vmikk/PhyloNext
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  favicon: assets/favicon.ico
+  logo: assets/PhyloNext_logo.png
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
