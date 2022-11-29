@@ -28,5 +28,4 @@ theme:
     text: 'Ubuntu'
     code: 'Ubuntu Mono'
   features:
-    - navigation.tabs
-    - navigation.tabs.sticky
+
