@@ -1,17 +1,24 @@
-# Welcome to MkDocs
+[PhyloNext source coce](https://github.com/vmikk/PhyloNext).
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## Pipeline summary
+
+1. Filtering of GBIF species occurrences for various taxonomic clades and geographic areas
+2. Removal of non-terrestrial records and spatial outliers (using density-based clustering)
+3. Preparation of phylogenetic tree (currently, only pre-constructed phylogenetic trees are available; with the update of OToL, phylogenetic trees will be downloaded automatically using API) and name-matching with GBIF species keys
+4. Spatial binning of species occurrences using Uber’s H3 system (hexagonal hierarchical spatial index)
+5. Estimation of phylogenetic diversity and endemism indices using [Biodiverse program](https://shawnlaffan.github.io/biodiverse/)
+6. Visualization of the obtained results
 
 ## Commands
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+Test run using Docker enginge
 
-## Project layout
+    nextflow run vmikk/phylonext -r main -profile test,docker
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+
+## Help
+
+To show a help message, run
+
+    nextflow run vmikk/phylonext -r main --helpMsg
+
