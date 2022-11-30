@@ -29,6 +29,9 @@ theme:
     code: 'Ubuntu Mono'
   features:
 
+markdown_extensions:
+  - attr_list
+  - md_in_html
 nav:
   - 'Introduction': 'index.md'
   - 'Installation': 'installation.md'
