@@ -9,15 +9,15 @@ description: >-
 PhyloNext was primarily developed for Linux. To run it from a command line on Windows, please use Windows Subsystem for Linux ([WSL](https://learn.microsoft.com/en-us/windows/wsl/install)).
 
 All pipeline dependencies were encapsulated in containers (Docker and Singularity), which will be automatically downloaded with the first run of PhyloNext. Only the main dependencies must be installed manually. They include:
-- Java
-- Nextflow
-- Container engine (either Docker or Singularity)
+* [Java](https://www.oracle.com/java/technologies/downloads/)
+* [`Nextflow`](https://www.nextflow.io/) 
+* Container engine (either [`Docker`](https://docker.com/) or [Singularity(https://docs.sylabs.io/guides/latest/user-guide/))
 
 The following installation instruction is for Ubuntu.
 
-## 1. Install [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) (`>=22.10.0`)
+## 1. Install [`Nextflow`](https://www.nextflow.io/docs/latest/getstarted.html#installation) 
 
-Nextflow requires Java 11 (or later, up to 18) to be installed.
+Nextflow (`>=22.10.0`) requires Java 11 (or later, up to 18) to be installed.
 
     sudo apt-get update
     sudo apt-get install default-jdk
