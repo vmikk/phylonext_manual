@@ -1,3 +1,5 @@
+![PhyloNext Logo](/assets/PhyloNext_logo.png)
+
 # PhyloNext
 
 [PhyloNext source code](https://github.com/vmikk/PhyloNext).
