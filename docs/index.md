@@ -25,8 +25,11 @@ The pipeline could be launched in a cloud environment (e.g., the [Microsoft Azur
 5. Estimation of phylogenetic diversity and endemism indices using [Biodiverse program](https://shawnlaffan.github.io/biodiverse/)
 6. Visualization of the obtained results
 
-## Phylonext Workflow
+## PhyloNext Workflow
 
+<a class="zoom" href="/assets/PhyloNext_Workflow.png">
+![PhyloNext Workflow](/assets/PhyloNext_Workflow.png)
+</a>
 
 ## Documentation Overview
 
