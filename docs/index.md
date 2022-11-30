@@ -1,6 +1,4 @@
-# PhyloNext <img src='/assets/PhyloNext_logo.png' align="right" height="100" />
-
-[PhyloNext source code](https://github.com/vmikk/PhyloNext).
+# PhyloNext ![PhyloNext logo](/assets/PhyloNext_logo.png){: style="height:100px;width:125px" align=right}
 
 PhyloNext is an automated pipeline for the analysis of phylogenetic diversity using [GBIF occurrence data](https://www.gbif.org/occurrence/search?occurrence_status=present), species phylogenies from [Open Tree of Life](https://tree.opentreeoflife.org), and [Biodiverse software](https://shawnlaffan.github.io/biodiverse/).
 
@@ -36,3 +34,5 @@ More detailed information for getting PhyloNext set up on your system.
 
 [Basic Usage](usage.md)  
 A subset of parameters users may commonly adjust.
+
+[PhyloNext source code](https://github.com/vmikk/PhyloNext).
