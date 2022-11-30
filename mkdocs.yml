@@ -30,7 +30,9 @@ theme:
   features:
 
 nav:
-  - 'PhyloNext':
-    - 'Introduction': 'index.md'
-    - 'Installation': 'installation.md'
-    - 'Basic Usage':  'usage.md'
+  - 'Introduction': 'index.md'
+  - 'Installation': 'installation.md'
+  - 'Basic Usage':  'usage.md'
+  - 'Web GUI':      'webgui.md'
+  - 'Biodiverse':   'biodiverse.md'
+
