@@ -32,10 +32,13 @@ theme:
 markdown_extensions:
   - attr_list
   - md_in_html
-nav:
-  - 'Introduction': 'index.md'
-  - 'Installation': 'installation.md'
-  - 'Basic Usage':  'usage.md'
-  - 'Web GUI':      'webgui.md'
-  - 'Biodiverse':   'biodiverse.md'
 
+nav:
+  - 'Introduction':         'index.md'
+  - 'Installation':         'installation.md'
+  - 'Basic Usage':          'usage.md'
+  - 'Output overview':      'outputs.md'
+  - 'Pipeline parameters':  'parameters.md'
+  - 'Troubleshooting':      'troubleshooting.md'
+  - 'Web GUI':              'webgui.md'
+  - 'Post processing':      'post.md'
