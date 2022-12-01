@@ -81,3 +81,23 @@ It is possible to use custom polygons instead of WGSRPD file.
 Polygons should be in the simple feature collection format (class `sf` of the [`sf` package](https://r-spatial.github.io/sf/), 
 geometry type: `MULTIPOLYGON`) and must contain `LevelName` column.
 Data should be saved as a serialized R object (with `saveRDS`).
+
+## Spatial outliers removal
+
+| Parameter              | Description                                           | Type      | Example | Default |
+| ---------------------- | ----------------------------------------------------- | --------- | ------- | ------- |
+| `--dbscan`             | Remove spatial outliers with density-based clustering | `boolean` | True    | False   |
+| `--dbscannoccurrences` | Minimum species occurrence to perform DBSCAN          | `integer` | 30      | 30      |
+| `--dbscanepsilon`      | DBSCAN parameter epsilon, km                          | `integer` | 1500    | 1500    |
+| `--dbscanminpts`       | DBSCAN min number of points                           | `integer` | 3       | 3       |
+
+Currently, only density-based clustering (DBSCAN) algorithm is implemented for removal of spatial outliers.  
+The DBSCAN algorithm requires 2 parameters:  
+- `eps` (`--dbscanepsilon`), which specifies how close points should be to each other to be considered a part of a cluster  
+  If the distance between two points is lower or equal to this value, these points are considered neighbors.  
+- `minPoints` (`--dbscanminpts`), the minimum number of points to form a dense region.  
+
+Parameter `--dbscannoccurrences` is used to skip DBSCAN filtering for species with low number of unique points (e.g., <30).  
+
+For more details, see the blog post ["Outlier Detection Using DBSCAN"](https://data-blog.gbif.org/post/outlier-detection-using-dbscan/) by John Waller.
+
