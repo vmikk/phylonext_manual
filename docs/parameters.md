@@ -7,6 +7,21 @@ description: >-
 # Pipeline parameters
 
 PhyloNext includes numerous configurable parameters.  
+For convenience, they are grouped into several categories: 
+
+- Input/output options
+- Data subsetting:
+    * Taxonomic scope
+    * Spatial scope
+- Spatial outliers removal
+- Occurrence filtering and binning
+- Diversity estimation
+- Visualization
+    * Interactive ([Leaflet](https://leafletjs.com/)-based)
+    * Static (maps in pdf format)
+- Phylogenetic tree-related parameters
+- Generic options
+
 ## Input/output options
 
 Define where the pipeline should find input data and save output data.
