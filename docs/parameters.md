@@ -50,3 +50,34 @@ Define which taxa should be analyzed.
 [^1]: Multiple comma-separated values allowed (e.g., "Felidae,Canidae" for the Family rank).  
 
 Unfortunately, `class` is a reserved keyword in Nextflow. Therefore, Latin `classis` is used as a parameter name.
+
+## Spatial scope
+
+Spatial filters.
+
+| Parameter   | Description                                   | Type     | Example                       | Default |
+| ----------- | --------------------------------------------- | -------- | ----------------------------- | ------- |
+| `--latmin`  | Minimum latitude of species occurrences [^2]  | `number` | 5.1                           |         |
+| `--latmax`  | Maximum latitude of species occurrences [^2]  | `number` | 15.5                          |         |
+| `--lonmin`  | Minimum longitude of species occurrences [^2] | `number` | 47.0                          |         |
+| `--lonmax`  | Maximum longitude of species occurrences [^2] | `number` | 55.5                          |         |
+| `--country` | Country code, ISO 3166 [^3]                   | `string` | "DE,PL,CZ"                    |         |
+| `--wgsrpd`  | Polygons of World Geographical Regions [^4]   | `file`   |                               |         |
+| `--regions` | Names of World Geographical Regions [^5]      | `string` | "L1_EUROPE,L1_ASIA_TEMPERATE" |         |
+
+[^2]: Coordinates should be provided in decimal degrees
+
+[^3]:
+    Country codes should be provided in ISO 3166 format (two-letter codes), 
+    see details [here](https://www.iso.org/obp/ui/#search) (column `Alpha-2` code).
+
+[^4]:
+    PhyloNext ships [WGSRPD](https://www.tdwg.org/standards/wgsrpd/) shapefile as a built-in data.
+    To use it, specify a full path to the data (e.g., `$(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/WGSRPD.RData")`)
+
+[^5]: Multiple comma-separated values allowed 
+
+It is possible to use custom polygons instead of WGSRPD file. 
+Polygons should be in the simple feature collection format (class `sf` of the [`sf` package](https://r-spatial.github.io/sf/), 
+geometry type: `MULTIPOLYGON`) and must contain `LevelName` column.
+Data should be saved as a serialized R object (with `saveRDS`).
