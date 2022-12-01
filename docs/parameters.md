@@ -123,3 +123,33 @@ More details on H3 resolutions could be found [here](https://h3geo.org/docs/core
     which corresponds to an accuracy of ~1.11 km at the equator. 
     To disable coordinate rounding, set `--roundcoords` to a negative values (e.g., `-1`).
 
+
+## Removal of common spatial errors
+
+PhyloNext implements several filters analogous to the filters 
+in [`CoordinateCleaner`](https://ropensci.github.io/CoordinateCleaner/) R package by Alexander Zizka:
+
+- Country and province centroids
+- Capital coordinates
+- Coordinates of biodiversity institutions
+- Urban areas
+- Seas
+
+| Parameter              | Description                                             | Type   | Default  |
+| ---------------------- | ------------------------------------------------------- | ------ | -------- |
+| `--terrestrial`        | Land polygon for removal of non-terrestrial occurrences | `file` | enabled  |
+| `--rmcountrycentroids` | Polygons with country and province centroids            | `file` | disabled |
+| `--rmcountrycapitals`  | Polygons with country capitals                          | `file` | disabled |
+| `--rminstitutions`     | Polygons with biological institutions and museums       | `file` | disabled |
+| `--rmurban`            | Polygons with urban areas                               | `file` | disabled |
+
+ PhyloNext provides files for removal of common spatial errors, 
+ the data are built-in in the `pipeline_data` direcory and can be selected in the following way:
+``` bash
+--terrestrial `$(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/Land_Buffered_025_dgr.RData")`
+--rmcountrycentroids `$(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/CC_CountryCentroids_buf_1000m.RData")`
+--rmcountrycapitals `$(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/CC_Capitals_buf_10000m.RData")`
+--rminstitutions `$(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/CC_Institutions_buf_100m.RData")`
+--rmurban `$(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/CC_Urban.RData")`
+```
+Alternatively, users can provide own files with custom polygons.
