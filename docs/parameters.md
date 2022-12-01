@@ -153,3 +153,19 @@ in [`CoordinateCleaner`](https://ropensci.github.io/CoordinateCleaner/) R packag
 --rmurban `$(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/CC_Urban.RData")`
 ```
 Alternatively, users can provide own files with custom polygons.
+
+## Diversity estimation
+
+Diversity estimation is performed using [Biodiverse](https://shawnlaffan.github.io/biodiverse/) program by Shawn Laffan. 
+Therefore, parameter values should correspond to the Biodiverse values.  
+
+| Parameter             | Description                                                                | Type      | Example                         | Default                                                                                                                                   |
+| --------------------- | -------------------------------------------------------------------------- | --------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| `--indices`           | Diversity and endemism indices to estimate [^7]                            | `string`  | "calc_richness,calc_pd,calc_pe" | "calc_richness,calc_simpson_shannon,calc_endemism_whole,calc_pd,calc_pe,calc_phylo_rpd1,calc_phylo_rpd2,calc_phylo_rpe1,calc_phylo_rpe2 " |
+| `--iterations`        | Number of randomisation iterations for standardized effect size estimation | `integer` | 1000                            | 1000                                                                                                                                      |
+| `--biodiversethreads` | Number of Biodiverse threads                                               | `integer` | 10                              | 10                                                                                                                                        |
+| `--randname`          | Randomisation scheme type                                                  | `string`  | "rand_structured"               | "rand_structured"                                                                                                                         |
+
+[^7]: 
+    Comma-seprated list of metrics. More than 350 indices are supported. 
+    For details see [Biodiverse manual](https://github.com/shawnlaffan/biodiverse/wiki/Indices).
