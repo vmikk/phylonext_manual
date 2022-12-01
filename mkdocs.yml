@@ -32,6 +32,13 @@ theme:
 markdown_extensions:
   - attr_list
   - md_in_html
+  - footnotes
+  - admonition
+  - toc:
+      permalink: True
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 nav:
   - 'Introduction':         'index.md'
