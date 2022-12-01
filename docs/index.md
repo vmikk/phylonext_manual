@@ -35,4 +35,20 @@ More detailed information for getting PhyloNext set up on your system.
 [Basic Usage](usage.md)  
 A subset of parameters users may commonly adjust.
 
-[PhyloNext source code](https://github.com/vmikk/PhyloNext).
+[Output Overview](outputs.md)
+Overview of PhyloNext output.
+
+[Parameters](parameters.md)
+The full set of parameters that users can tweak in PhyloNext.
+
+[Troubleshooting](troubleshooting.md)
+Handling errors.
+
+[Web GUI](webgui.md)
+Web-based graphical user interface for PhyloNext.
+
+[Post processing](post.md)
+Post processing output files.
+
+PhyloNext source code is deposited [here](https://github.com/vmikk/PhyloNext).
+
