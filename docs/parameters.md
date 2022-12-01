@@ -169,3 +169,47 @@ Therefore, parameter values should correspond to the Biodiverse values.
 [^7]: 
     Comma-seprated list of metrics. More than 350 indices are supported. 
     For details see [Biodiverse manual](https://github.com/shawnlaffan/biodiverse/wiki/Indices).
+
+## Visualization - interactive
+
+Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
+
+| Parameter              | Description                                                                     | Type      | Example     | Default                                                                              |
+| ---------------------- | ------------------------------------------------------------------------------- | --------- | ----------- | ------------------------------------------------------------------------------------ |
+| `--leaflet_var`        | Diversity and endemism indices to estimate [^8]                                 | `string`  | "PD,SES_PD" | "RICHNESS_ALL,PD,SES_PD,PD_P,ENDW_WE,SES_ENDW_WE,PE_WE,SES_PE_WE,CANAPE,Redundancy " |
+| `--leaflet_color`      | Color scheme for continuous variables  [^9]                                     | `string`  | "RdYlBu"    | "RdYlBu"                                                                             |
+| `--leaflet_palette`    | Color palette for continuous variables [^10]                                    | `string`  | "quantile"  | "quantile"                                                                           |
+| `--leaflet_bins`       | Number of color bins for continuous variables [^11]                             | `integer` | 5           | 5                                                                                    |
+| `--leaflet_redundancy` | Redundancy threshold for hiding the grid cells with low number of records [^12] | `number`  | 85          | 0                                                                                    |
+
+[^8]:
+    For a list of indices available in Biodiverse, see [here](https://github.com/shawnlaffan/biodiverse/wiki/IndicesDevVersion).
+    Note: to show the index on a map, please include appropriate name of the Biodiverse subroutine with `--indices` parameter. 
+    To display Standardized-Effect-Size-based variables, add `SES_` prefix to the index name (e.g., `SES_PD`).
+    For CANAPE (categorical analysis of neo- and paleoendemism; Mishler et al., 2014), add `CANAPE` to the variables list.
+
+
+[^9]: 
+    The name of a a color scheme from the [`ColorBrewer`](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) designed by Cynthia Brewer. 
+    For more options see [here](https://r-graph-gallery.com/38-rcolorbrewers-palettes.html).
+
+[^10]:
+   Defines mapping of data values to colors . See [Leaflet docs](https://rstudio.github.io/leaflet/colors.html):  
+   - `colorNumeric` is a simple linear mapping from continuous numeric data to an interpolated palette
+   - `colorBin` also maps continuous numeric data, but performs binning based on value (see the cut function)
+   - `colorQuantile` similarly bins numeric data, but via the quantile function
+
+[^11]:
+    Sampling redundancy is defined as [1 – (richness / number of specimens)] in a grid cell. 
+    By default, parameter `--leaflet_redundancy` is set to 0, which will display all grid cells).
+
+!!! info CANAPE
+    CANAPE is able to distinguish different types of centres of endemism, and can thus give insights 
+    into different evolutionary and ecological processes that may be responsible for these patterns. 
+    
+    - The centres of paleo-endemism indicate places where there are over-representation of long branches that are rare across the landscape.
+    - The centres of neo-endemism indicate an area where there is an over-representation of short branches that are rare on the landscape.
+    - Mixture of both paleo-endemism and neo-endemism
+    - Super-endemic sites
+
+
