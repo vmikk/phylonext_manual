@@ -50,5 +50,9 @@ Web-based graphical user interface for PhyloNext.
 [Post processing](post.md)
 Post processing output files.
 
+## Issues
+
+If your ran into any issues, please let us know by submitting a [GitHub Issue](https://github.com/vmikk/PhyloNext/issues).
+
 PhyloNext source code is deposited [here](https://github.com/vmikk/PhyloNext).
 
