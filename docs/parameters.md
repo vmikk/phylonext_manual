@@ -88,10 +88,11 @@ Spatial filters.
 
 ^4^: Multiple comma-separated values allowed 
 
-It is possible to use custom polygons instead of WGSRPD file. 
-Polygons should be in the simple feature collection format (class `sf` of the [`sf` package](https://r-spatial.github.io/sf/), 
-geometry type: `MULTIPOLYGON`) and must contain `LevelName` column.
-Data should be saved as a serialized R object (with `saveRDS`).
+!!! info Custom polygons
+    It is possible to use custom polygons instead of WGSRPD file. 
+    Polygons should be in the simple feature collection format (class `sf` of the [`sf` package](https://r-spatial.github.io/sf/), 
+    geometry type: `MULTIPOLYGON`) and must contain `LevelName` column.
+    Data should be saved as a serialized R object (with `saveRDS`).
 
 ## Spatial outliers removal
 
