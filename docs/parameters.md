@@ -241,3 +241,76 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     World base map is based on [Natural Earth](https://www.naturalearthdata.com/) data 
     and is located in the `pipeline_data/WorldMap_NaturalEarth_Medium.RData` file.
 
+## Phylogenetic tree-related parameters
+
+| Parameter     | Description                                                            | Type     | Default  |
+| ------------- | ---------------------------------------------------------------------- | -------- | -------- |
+| `--phylabels` | Type of tip labels on a phylogenetic tree ("OTT" or "Latin") ^1^       | `string` | Latin    |
+| `--taxgroup`  | Specific taxonomy group in Open Tree of Life (default, "All_life") ^2^ | `string` | All_life |
+
+^1^: 
+    If a custom phylogenetic tree was provided by user (with `--phytree` parameter),
+    it's important to specify the type of tip labels. 
+    Currently, two labeling schemes are supported:
+
+- Latin binomials in `Genus_species` format (e.g., "Homo_sapiens"). NB! whitespace is not allowed!
+- Open Tree of Life IDs (e.g., ["ott770315"](https://tree.opentreeoflife.org/taxonomy/browse?id=770315))
+
+^2^:
+    In the case if tree tips are in OTT-format, 
+    it is possible to limit the query scope at [Taxonomic Name Resolution Service](https://tree.opentreeoflife.org/curator/tnrs/) of Open Tree of Life. 
+    List available taxonomic contexts in [`rotl`](https://docs.ropensci.org/rotl/) v.3.0.12 package:
+
+- All life (default)
+- Animals 
+    - Birds
+    - Tetrapods
+    - Mammals
+    - Amphibians
+    - Vertebrates
+    - Arthropods
+    - Molluscs
+    - Nematodes
+    - Platyhelminthes
+    - Annelids
+    - Cnidarians
+    - Arachnids
+    - Insects
+- Land plants 
+    - Hornworts
+    - Mosses
+    - Liverworts
+    - Vascular plants
+    - Club mosses
+    - Ferns
+    - Seed plants
+    - Flowering plants
+    - Monocots
+    - Eudicots
+    - Rosids
+    - Asterids
+    - Asterales
+    - Asteraceae
+    - Aster 
+    - Symphyotrichum
+    - Campanulaceae
+    - Lobelia
+- Fungi 
+    - Basidiomycetes
+    - Ascomycetes
+- Bacteria
+- Archaea
+- SAR group
+    - Excavata
+    - Amoebozoa
+    - Centrohelida
+    - Haptophyta
+    - Apusozoa
+    - Diatoms
+    - Ciliates
+    - Forams
+
+!!! info Taxonomic context
+    Whitespace is not allowed in taxonomic context! 
+    Please replace space with underscore (e.g., "Seed plants" should be speciefied as `--taxgroup Seed_plants`).
+
