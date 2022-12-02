@@ -222,4 +222,21 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     - Mixture of both paleo-endemism and neo-endemism
     - Super-endemic sites
 
+## Visualization - static
+
+| Parameter      | Description                      | Type     | Example | Default                               |
+| -------------- | -------------------------------- | -------- | ------- | ------------------------------------- |
+| `--plotvar`    | Variables to plot ^1^            | `string` | "PD"    | "RICHNESS_ALL,PD,PD_P"                |
+| `--plottype`   | Plot type                        | `string` |         | raw                                   |
+| `--plotformat` | Plot format (jpg,pdf,png)        | `string` |         | pdf                                   |
+| `--plotwidth`  | Plot width (default, 18 inches)  | `number` |         | 18                                    |
+| `--plotheight` | Plot height (default, 18 inches) | `number` |         | 18                                    |
+| `--plotunits`  | Plot size units (in,cm)          | `string` |         | in                                    |
+| `--world`      | World basemap ^2^                | `file`   |         | enabled                               |
+
+^1^: Multiple comma-separated values allowed. For details see `--leaflet_var` parameter notes.
+
+^2^:
+    World base map is based on [Natural Earth](https://www.naturalearthdata.com/) data 
+    and is located in the `pipeline_data/WorldMap_NaturalEarth_Medium.RData` file.
 
