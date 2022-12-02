@@ -200,6 +200,7 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     Note: to show the index on a map, please include appropriate name of the Biodiverse subroutine with `--indices` parameter. 
     To display Standardized-Effect-Size-based variables, add `SES_` prefix to the index name (e.g., `SES_PD`).
     For CANAPE (categorical analysis of neo- and paleoendemism; Mishler et al., 2014), add `CANAPE` to the variables list.
+    To display redundancy index (measure of sampling completeness; see [Mishler et al., 2020](https://onlinelibrary.wiley.com/doi/full/10.1111/jse.12590)), add `Redundancy` to the variables list.  
 
 ^2^: 
     The name of a a color scheme from the [`ColorBrewer`](https://colorbrewer2.org/#type=sequential&scheme=BuGn&n=3) designed by Cynthia Brewer. 
