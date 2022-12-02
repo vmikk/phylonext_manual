@@ -50,6 +50,9 @@ Web-based graphical user interface for PhyloNext.
 [Post processing](post.md)
 Post processing output files.
 
+[Acknowledgments](acknowledgements.md)
+Acknowledgments and a list of software packages used by PhyloNext.
+
 ## Issues
 
 If your ran into any issues, please let us know by submitting a [GitHub Issue](https://github.com/vmikk/PhyloNext/issues).
