@@ -119,7 +119,7 @@ For more details, see the blog post ["Outlier Detection Using DBSCAN"](https://d
 | ---------------- | ------------------------------------------------------- | --------- | ------- | ------- |
 | `--minyear`      | Minimum year of record's occurrences                    | `integer` | 2000    | 1945    |
 | `--h3resolution` | Spatial resolution of the H3 geospatial indexing system | `integer` | 4       | 4       |
-| `--roundcoords`  | Round spatial coordinates to N decimal places [^6]      | `integer` | 2       | 2       |
+| `--roundcoords`  | Round spatial coordinates to N decimal places ^1^       | `integer` | 2       | 2       |
 
 For spatial binning of species occurrences, PhyloNext uses H3 geospatial indexing system [developed by Uber](https://h3geo.org/docs). 
 H3 represents a hierarchical geospatial index, where each hexagonal grid cell has a unique index (e.g., `8a1f05835a37fff` for GBIF headquarter). 
@@ -127,7 +127,7 @@ H3 supports 16 resolutions (from 1 to 16), which can be selected in PhyloNext us
 By default, PhyloNext uses resolution `4`, which corresponds to a hexagon with edge length of 22.6 km and cell area of 1170 km<sup>2</sup>. 
 More details on H3 resolutions could be found [here](https://h3geo.org/docs/core-library/restable/).  
 
-[^6]: 
+^1^: 
     As DBSCAN filtering is very computationally intensive, 
     it is possible to reduce dataset size (almost without loosing precision) by rounding record coordinates. 
     By default, coordinates are rounded to 2 decimal places, 
