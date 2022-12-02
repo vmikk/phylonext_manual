@@ -196,10 +196,10 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 | `--leaflet_redundancy` | Redundancy threshold for hiding the grid cells with low number of records ^4^ | `number`  | 85          | 0                                                                                    |
 
 ^1^:
-    For a list of indices available in Biodiverse, see [here](https://github.com/shawnlaffan/biodiverse/wiki/IndicesDevVersion).
-    Note: to show the index on a map, please include appropriate name of the Biodiverse subroutine with `--indices` parameter. 
-    To display Standardized-Effect-Size-based variables, add `SES_` prefix to the index name (e.g., `SES_PD`).
-    For CANAPE (categorical analysis of neo- and paleoendemism; Mishler et al., 2014), add `CANAPE` to the variables list.
+    For a list of indices available in Biodiverse, see [here](https://github.com/shawnlaffan/biodiverse/wiki/IndicesDevVersion).  
+    Note: to show the index on a map, please include appropriate name of the Biodiverse subroutine with `--indices` parameter.  
+    To display Standardized-Effect-Size-based variables, add `SES_` prefix to the index name (e.g., `SES_PD`).  
+    For CANAPE (categorical analysis of neo- and paleoendemism; Mishler et al., 2014), add `CANAPE` to the variables list.  
     To display redundancy index (measure of sampling completeness; see [Mishler et al., 2020](https://onlinelibrary.wiley.com/doi/full/10.1111/jse.12590)), add `Redundancy` to the variables list.  
 
 ^2^: 
@@ -208,6 +208,7 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 
 ^3^:
    Defines mapping of data values to colors . See [Leaflet docs](https://rstudio.github.io/leaflet/colors.html):  
+
    - `colorNumeric` is a simple linear mapping from continuous numeric data to an interpolated palette
    - `colorBin` also maps continuous numeric data, but performs binning based on value (see the cut function)
    - `colorQuantile` similarly bins numeric data, but via the quantile function
