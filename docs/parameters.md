@@ -314,3 +314,12 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     Whitespace is not allowed in taxonomic context! 
     Please replace space with underscore (e.g., "Seed plants" should be speciefied as `--taxgroup Seed_plants`).
 
+
+## Generic options
+
+| Parameter          | Description                                                                | Type      | Default |
+| ------------------ | -------------------------------------------------------------------------- | --------- | ------- |
+| `--deriveddataset` | Export list of GBIF dataset keys for the filtered species occurrences. ^1^ | `boolean` | True    |
+| `--helpMsg`        | Display help text (pipeline)                                               | `boolean` |         |
+
+^1^: Could be used for citation and preparing a derived dataset with unique DOI.
