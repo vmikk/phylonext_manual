@@ -21,6 +21,7 @@ For convenience, they are grouped into several categories:
     * Static (maps in pdf format)
 - Phylogenetic tree-related parameters
 - Generic options
+- Nextflow-specific parameters
 
 ## Input/output options
 
@@ -323,3 +324,18 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 | `--helpMsg`        | Display help text (pipeline)                                               | `boolean` |         |
 
 ^1^: Could be used for citation and preparing a derived dataset with unique DOI.
+
+## Nextflow-specific parameters
+
+!!! info Parameter types
+    PhyloNext-specific parameters are specified using double dash prefix (e.g., `--something value`). 
+    Parameters related to the Nextflow workflow manager starts with a single dash prefix (e.g., `-work-dir wd`)
+
+
+| Parameter  | Description                                                                                                   | Type      | Example     | Default                  |
+| ---------- | ------------------------------------------------------------------------------------------------------------- | --------- | ----------- | ------------------------ |
+| `-qs`      | Queue size (max number of processes that can be executed in parallel)                                         | `integer` | 8           | number of available CPUs |
+| `-w`       | Path to the working directory to store intermediate results                                                   | `string`  | "$(pwd)/wd" | "work"                   |
+| `-resume`  | Execute the pipeline using the cached results.<br>Useful to continue executions that was stopped by an error. |           |             |                          |
+| `-profile` | Configuration profile                                                                                         | `string`  | test,docker |                          |
+
