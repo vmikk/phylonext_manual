@@ -4,14 +4,21 @@ description: >-
     An overview of PhyloNext parameters you might need to adjust to meet your needs.
 ---
 
-To show a help message, run
+## Input data
+
+## Help
+
+To show a help message, run:
 
     nextflow run vmikk/phylonext -r main --helpMsg
 
-Test run using Docker enginge
+## Run test example
+
+Test run the pipilen using test data and Docker engine:
 
     nextflow run vmikk/phylonext -r main -profile test,docker
 
+## Example command
 
     nextflow run vmikk/phylonext -r main \
       --input "/mnt/GBIF/Parquet/2022-01-01/occurrence.parquet/" \
@@ -24,4 +31,11 @@ Test run using Docker enginge
       --outdir "$PWD" \
       -resume
 
+
+## What's next?
+
+- Explore interactive maps (see Output file description)  
+- Manually configure static map using the output in GeoPackage format (see Postprocessing)  
+- Explore the results using Biodiverse program (see Postprocessing)  
+- Prepare citable derived dataset with unique DOI (see Postprocessing)  
 
