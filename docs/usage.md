@@ -35,6 +35,24 @@ nextflow run vmikk/phylonext -r main \
   -resume
 ```
 
+## Passing in an input parameter file
+
+It is possible to pass the pipeline parameters via YAML or JSON file, e.g.:
+```
+nextflow run vmikk/phylonext -r main -resume -params-file Mammals.yaml
+```
+
+The YAML file could contain the following:
+``` yaml
+input      : "/mnt/GBIF/Parquet/2022-01-01/occurrence.parquet/"
+classis    : "Mammalia"
+family     : "Felidae,Canidae"
+country    : "DE,PL,CZ"
+minyear    : 2000
+dbscan     : true
+phytree    : "/path/to/the/phylogenetic/tree.nwk"
+iterations : 100
+```
 
 ## The other helpful commands
 
