@@ -9,27 +9,60 @@ description: >-
 ## Help
 
 To show a help message, run:
-
-    nextflow run vmikk/phylonext -r main --helpMsg
+```{bash}
+nextflow run vmikk/phylonext -r main --helpMsg
+```
 
 ## Run test example
 
-Test run the pipilen using test data and Docker engine:
-
-    nextflow run vmikk/phylonext -r main -profile test,docker
+Test run the pipeline using test data and Docker engine:
+```{bash}
+nextflow run vmikk/phylonext -r main -profile test,docker
+```
 
 ## Example command
 
-    nextflow run vmikk/phylonext -r main \
-      --input "/mnt/GBIF/Parquet/2022-01-01/occurrence.parquet/" \
-      --classis "Mammalia" --family  "Felidae,Canidae" \
-      --country "DE,PL,CZ"  \
-      --minyear 2000  \
-      --dbscan true  \
-      --phytree  $(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/test_data/phy_trees/Mammals.nwk") \
-      --iterations 100  \
-      --outdir "$PWD" \
-      -resume
+```{bash}
+nextflow run vmikk/phylonext -r main \
+  --input "/mnt/GBIF/Parquet/2022-01-01/occurrence.parquet/" \
+  --classis "Mammalia" --family  "Felidae,Canidae" \
+  --country "DE,PL,CZ"  \
+  --minyear 2000  \
+  --dbscan true  \
+  --phytree  $(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/test_data/phy_trees/Mammals.nwk") \
+  --iterations 100  \
+  --outdir "$PWD" \
+  -resume
+```
+
+
+## The other helpful commands
+
+Download or update the pipeline.  
+By default, the pipeline is stored in the `~/.nextflow/assets/vmikk/PhyloNext` directory
+``` bash
+nextflow pull vmikk/phylonext
+```
+
+Run the latest development version of the pipeline
+``` bash
+nextflow run vmikk/phylonext -r main ...
+```
+Run the tagged version (e.g., v1.0) of the pipeline
+``` bash
+nextflow run vmikk/phylonext -r v1.0 ...
+```
+Print the pipeline and system runtime information
+``` bash
+nextflow info
+nextflow info vmikk/phylonext
+```
+
+Delete the local copy of the pipeline
+``` bash
+nextflow drop vmikk/phylonext
+```
+
 
 
 ## What's next?
