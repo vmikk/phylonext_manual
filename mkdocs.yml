@@ -54,6 +54,7 @@ nav:
   - 'Introduction':         'index.md'
   - 'Installation':         'installation.md'
   - 'Basic Usage':          'usage.md'
+  - 'Input data':           'inputdata.md'
   - 'Output overview':      'outputs.md'
   - 'Pipeline parameters':  'parameters.md'
   - 'Troubleshooting':      'troubleshooting.md'
