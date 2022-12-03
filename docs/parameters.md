@@ -117,11 +117,14 @@ For more details, see the blog post ["Outlier Detection Using DBSCAN"](https://d
 
 ## Occurrence filtering and binning
 
-| Parameter        | Description                                             | Type      | Example | Default |
-| ---------------- | ------------------------------------------------------- | --------- | ------- | ------- |
-| `--minyear`      | Minimum year of record's occurrences                    | `integer` | 2000    | 1945    |
-| `--h3resolution` | Spatial resolution of the H3 geospatial indexing system | `integer` | 4       | 4       |
-| `--roundcoords`  | Round spatial coordinates to N decimal places ^1^       | `integer` | 2       | 2       |
+| Parameter                | Description                                             | Type      | Example              | Default                           |
+| ------------------------ | ------------------------------------------------------- | --------- | -------------------- | --------------------------------- |
+| `--minyear`              | Minimum year of record's occurrences                    | `integer` | 2000                 | 1945                              |
+| `--basisofrecordinclude` | Round spatial coordinates to N decimal places ^1^       | `string`  | "PRESERVED_SPECIMEN" |                                   |
+| `--basisofrecordexclude` | Round spatial coordinates to N decimal places ^1^       | `string`  | "FOSSIL_SPECIMEN"    | "FOSSIL_SPECIMEN,LIVING_SPECIMEN" |
+| `--h3resolution`         | Spatial resolution of the H3 geospatial indexing system | `integer` | 4                    | 4                                 |
+| `--roundcoords`          | Round spatial coordinates to N decimal places ^2^       | `integer` | 2                    | 2                                 |
+
 
 For spatial binning of species occurrences, PhyloNext uses H3 geospatial indexing system [developed by Uber](https://h3geo.org/docs). 
 H3 represents a hierarchical geospatial index, where each hexagonal grid cell has a unique index (e.g., `8a1f05835a37fff` for GBIF headquarter). 
