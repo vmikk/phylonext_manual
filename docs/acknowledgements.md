@@ -10,4 +10,9 @@ Nearly every component PhyloNext uses, from the workflow, datasets, software pac
 
 !!! info "Please Cite Datasets and Tools"
     If you have used PhyloNext in your work, please be sure to cite any datasets
-    or software you may have used.
+    or software you may have used. For details, see [Citations section](citations.md).
+
+
+## Funding
+
+The work is supported by a grant “PD (Phylogenetic Diversity) in the Cloud” to GBIF Supplemental funds from the GEO-Microsoft Planetary Computer Programme.
