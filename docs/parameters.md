@@ -89,7 +89,7 @@ Spatial filters.
 
 ^4^: Multiple comma-separated values allowed 
 
-!!! info Custom polygons
+!!! info "Custom polygons"
     It is possible to use custom polygons instead of WGSRPD file. 
     Polygons should be in the simple feature collection format (class `sf` of the [`sf` package](https://r-spatial.github.io/sf/), 
     geometry type: `MULTIPOLYGON`) and must contain `LevelName` column.
@@ -217,8 +217,9 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     Sampling redundancy is defined as [1 – (richness / number of specimens)] in a grid cell. 
     By default, parameter `--leaflet_redundancy` is set to 0, which will display all grid cells.
 
-!!! info CANAPE
-    CANAPE is able to distinguish different types of centres of endemism, and can thus give insights 
+!!! info "CANAPE"
+    CANAPE (Categorical Analysis of Palaeo and Neo Endemism) 
+    is able to distinguish different types of centres of endemism, and can thus give insights 
     into different evolutionary and ecological processes that may be responsible for these patterns. 
     
     - The centres of paleo-endemism indicate places where there are over-representation of long branches that are rare across the landscape.
@@ -313,7 +314,7 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     - Ciliates
     - Forams
 
-!!! info Taxonomic context
+!!! info "Taxonomic context"
     Whitespace is not allowed in taxonomic context! 
     Please replace space with underscore (e.g., "Seed plants" should be speciefied as `--taxgroup Seed_plants`).
 
@@ -329,7 +330,7 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 
 ## Nextflow-specific parameters
 
-!!! info Parameter types
+!!! info "Parameter types"
     PhyloNext-specific parameters are specified using double dash prefix (e.g., `--something value`). 
     Parameters related to the Nextflow workflow manager starts with a single dash prefix (e.g., `-work-dir wd`)
 
