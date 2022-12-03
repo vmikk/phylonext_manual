@@ -132,7 +132,12 @@ H3 supports 16 resolutions (from 1 to 16), which can be selected in PhyloNext us
 By default, PhyloNext uses resolution `4`, which corresponds to a hexagon with edge length of 22.6 km and cell area of 1170 km<sup>2</sup>. 
 More details on H3 resolutions could be found [here](https://h3geo.org/docs/core-library/restable/).  
 
-^1^: 
+^1^:
+    For details, see description of a Darwin Core term [Basis of record](https://docs.gbif.org/course-data-use/en/basis-of-record.html) 
+    and a short explanation [here](https://data-blog.gbif.org/post/living-specimen-to-preserved-specimen-understanding-basis-of-record/).  
+    Multiple comma-separated values allowed.  
+
+^2^: 
     As DBSCAN filtering is very computationally intensive, 
     it is possible to reduce dataset size (almost without loosing precision) by rounding record coordinates. 
     By default, coordinates are rounded to 2 decimal places, 
