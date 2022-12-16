@@ -148,4 +148,6 @@ aria2c \
   -o gbif_dump.zip
 ```
 
+!!! info "GBIF API beginners guide"
+    A very nice introduction to the GBIF APIs can be found in the ["GBIF API beginners guide"](https://data-blog.gbif.org/post/gbif-api-beginners-guide/) by John Waller.
 
