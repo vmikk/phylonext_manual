@@ -6,6 +6,9 @@ description: >-
 
 ## Input data
 
+!!! info "Input data"
+    For mode details, see the [input data](inputdata.md) description section in the documentation.
+
 ## Help
 
 To show a help message, run:
