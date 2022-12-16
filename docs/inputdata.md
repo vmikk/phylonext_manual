@@ -114,6 +114,12 @@ If you would like to specify taxonomic or spatial scopes, you may add additional
     "value": "AU"
    }
 ```
+
+!!! note "GBIF predicates"
+    An extensive list of supported predicates and query parameters could be found here: 
+    [https://www.gbif.org/developer/occurrence](https://www.gbif.org/developer/occurrence)
+
+
 To send download request, please fill in your user name and password and run:
 ```{bash}
 USER="USERNAME"
