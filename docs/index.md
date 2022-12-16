@@ -35,6 +35,9 @@ More detailed information for getting PhyloNext set up on your system.
 [Basic Usage](usage.md)  
 A subset of parameters users may commonly adjust.
 
+[Input data](inputdata.md)  
+Description of the input data used by pipeline.
+
 [Output Overview](outputs.md)  
 Overview of PhyloNext output.
 
