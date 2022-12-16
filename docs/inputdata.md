@@ -12,7 +12,7 @@ description: >-
 ## Obtaining a local snapshot of species occurrences from GBIF
 
 If you would like to run the pipeline locally, you may download the full GBIF occurrence dump from the [Amazon AWS cloud](https://registry.opendata.aws/gbif/) using the [AWS CLI program](https://aws.amazon.com/cli/) (no AWS account required). E.g., to download `2022-05-01` dump to the `GBIF` directory in your home folder run:
-```{bash}
+``` bash
 aws s3 sync \
   s3://gbif-open-data-eu-central-1/occurrence/2022-05-01/occurrence.parquet/ \
   ~/GBIF/ \
@@ -20,7 +20,7 @@ aws s3 sync \
 ```
 
 Alternative GBIF snapshot is also [hosted by the Microsoft AI for Earth program](https://github.com/microsoft/AIforEarthDataSets/blob/main/data/gbif.md). To download it using the [AzCopy command-line utility](https://docs.microsoft.com/en-us/azure/storage/common/storage-use-azcopy-v10) run:
-```{bash}
+``` bash
 azcopy copy \
   "https://ai4edataeuwest.blob.core.windows.net/gbif/occurrence/2022-05-01/occurrence.parquet/*" \
   "~/GBIF/" \
@@ -44,7 +44,7 @@ It is possible to obtain a subset of species occurrence from GBIF programmatical
 
 First, you must specify a set of filters that should be applied to the data. For this purpose, create a simple text file in JSON format (see the example below). Please replace `creator` and `notification_address` with your own.
 
-```{json}
+``` json
 {
  "format": "SIMPLE_PARQUET",
  "creator": "USERNAME",
@@ -102,7 +102,7 @@ First, you must specify a set of filters that should be applied to the data. For
 ```
 
 If you would like to specify taxonomic or spatial scopes, you may add additional **predicates** (query expressions to retrieve occurrence record downloads), e.g.:
-```{json}
+``` json
    {
     "type": "equals",
     "key": "GENUS_KEY",
@@ -121,7 +121,7 @@ If you would like to specify taxonomic or spatial scopes, you may add additional
 
 
 To send download request, please fill in your user name and password and run:
-```{bash}
+``` bash
 USER="USERNAME"
 PASSWORD="PASSWORD"
 
@@ -133,14 +133,14 @@ curl -Ssi \
 ```
 
 To check the status of the request, use:
-```{bash}
+``` bash
 curl -Ss https://api.gbif.org/v1/occurrence/download/0003936-220831081235567 | jq .
 ```
 (don't forget to replace the download ID!)
 
 
 To download the results (zip archive with parquet files), use
-```{bash}
+``` bash
 mkdir -p ~/GBIF_dumps
 cd ~/GBIF_dumps
 aria2c \
