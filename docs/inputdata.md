@@ -37,3 +37,96 @@ azcopy copy \
     at Apache Arrow issue tracker.
 
 If you would like to remove records with geospatial issues from the data, please see the following section.
+
+## Data subset
+
+It is possible to obtain a subset of species occurrence from GBIF programmatically. For this purpose, one may use an application programming interface (API) provided by GBIF. API is a set of rules and protocols that allow different software programs to communicate with each other. Therefore, APIs enable developers to access the data and functionality of a website or web-based service in a controlled, programmatic way.
+
+First, you must specify a set of filters that should be applied to the data. For this purpose, create a simple text file in JSON format (see the example below). Please replace `creator` and `notification_address` with your own.
+
+```{json}
+{
+ "format": "SIMPLE_PARQUET",
+ "creator": "USERNAME",
+ "notification_address": [ "USEREMAIL" ],
+ "predicate": {
+  "type": "and",
+  "predicates": [
+   {
+    "type": "equals",
+    "key": "OCCURRENCE_STATUS",
+    "value": "PRESENT"
+   },
+   {
+    "type": "equals",
+    "key": "HAS_GEOSPATIAL_ISSUE",
+    "value": "false"
+   },
+   {
+    "type": "not",
+    "predicate": {
+     "type": "in",
+     "key": "ESTABLISHMENT_MEANS",
+     "values": [
+      "MANAGED",
+      "INTRODUCED",
+      "INVASIVE",
+      "NATURALISED"
+     ]
+    }
+   },
+   {
+    "type": "not",
+    "predicate": {
+     "type": "in",
+     "key": "BASIS_OF_RECORD",
+     "values": [
+      "FOSSIL_SPECIMEN",
+      "LIVING_SPECIMEN"
+     ]
+    }
+   },
+   {
+    "type": "not",
+    "predicate": {
+     "type": "in",
+     "key": "ISSUE",
+     "values": [
+      "TAXON_MATCH_HIGHERRANK"
+     ]
+    }
+   }
+  ]
+ }
+}
+```
+
+To send download request, please fill in your user name and password and run:
+```{bash}
+USER="USERNAME"
+PASSWORD="PASSWORD"
+
+curl -Ssi \
+  --user "$USER":"$PASSWORD" \
+  -H "Content-Type: application/json" \
+  -X POST -d @get_parquet.json \
+  https://api.gbif.org/v1/occurrence/download/request
+```
+
+To check the status of the request, use:
+```{bash}
+curl -Ss https://api.gbif.org/v1/occurrence/download/0003936-220831081235567 | jq .
+```
+(don't forget to replace the download ID!)
+
+
+To download the results (zip archive with parquet files), use
+```{bash}
+mkdir -p ~/GBIF_dumps
+cd ~/GBIF_dumps
+aria2c \
+  https://api.gbif.org/v1/occurrence/download/request/0003936-220831081235567.zip \
+  -o gbif_dump.zip
+```
+
+
