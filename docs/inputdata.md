@@ -26,3 +26,14 @@ azcopy copy \
   "~/GBIF/" \
   --recursive=true
 ```
+
+!!! warning "Limitations"
+    Currently, `arrow` v.10.0.0 does not support filtering of array-type columns. 
+    E.g., it could be useful for removal of common geospatial issues in the data (see column `issue` in the parquet files).
+
+!!! example "For developers"
+    See the related issues [ARROW-16641](https://issues.apache.org/jira/browse/ARROW-16641) 
+    and [ARROW-16702](https://issues.apache.org/jira/browse/ARROW-16702) 
+    at Apache Arrow issue tracker.
+
+If you would like to remove records with geospatial issues from the data, please see the following section.
