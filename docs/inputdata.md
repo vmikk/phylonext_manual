@@ -101,6 +101,19 @@ First, you must specify a set of filters that should be applied to the data. For
 }
 ```
 
+If you would like to specify taxonomic or spatial scopes, you may add additional **predicates** (query expressions to retrieve occurrence record downloads), e.g.:
+```{json}
+   {
+    "type": "equals",
+    "key": "GENUS_KEY",
+    "value": "2978223"
+   },
+   {
+    "type": "equals",
+    "key": "COUNTRY",
+    "value": "AU"
+   }
+```
 To send download request, please fill in your user name and password and run:
 ```{bash}
 USER="USERNAME"
