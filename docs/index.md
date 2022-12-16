@@ -56,9 +56,12 @@ Post processing output files.
 [Acknowledgments](acknowledgements.md)  
 Acknowledgments and a list of software packages used by PhyloNext.
 
-## Issues
+## Contributions and Support
 
 If your ran into any issues, please let us know by submitting a [GitHub Issue](https://github.com/vmikk/PhyloNext/issues).
+
+If you would like to contribute to this pipeline, please see the [contributing guidelines](https://github.com/vmikk/PhyloNext/blob/master/CONTRIBUTING.md).
+
 
 PhyloNext source code is deposited [here](https://github.com/vmikk/PhyloNext).
 
