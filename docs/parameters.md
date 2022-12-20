@@ -333,6 +333,14 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     automatic tree retrieval could fail. Therefore, it could be helpful to override the maximum node age to obtain the tree. 
     Note, however, that in this case, units of some of the diversity indices (e.g., PD) become arbitrary.
 
+^4^:
+    Open Tree utilizes taxonomic data to augment the structure and completeness of the synthetic tree 
+    when source phylogenies are absent or sparsely sampled (see [Hinchliff et al., 2015](https://www.pnas.org/doi/10.1073/pnas.1423041112)). 
+    If required, branches lacking phylogenetic support could be removed from the tree using `--phyloonly` argument.
+
+!!! info "Open Tree of Life"
+    More information about Open Tree of Life is available at [https://opentreeoflife.github.io/](https://opentreeoflife.github.io/).
+
 ## Generic options
 
 | Parameter          | Description                                                                | Type      | Default |
