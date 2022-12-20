@@ -165,6 +165,6 @@ aria2c \
 
 !!! example "Required software"
     To run the commands mentioned above, you may need to install the following software:  
-    [`curl`](https://curl.se/), [jq](https://stedolan.github.io/jq/), and [`aria2`](https://aria2.github.io/).  
-    If you are using [`conda`](https://docs.conda.io/en/latest/) package manager, it could be done in a singe command:  
+    [**`curl`**](https://curl.se/), [**`jq`**](https://stedolan.github.io/jq/), and [**`aria2`**](https://aria2.github.io/).  
+    If you are using [**`conda`**](https://docs.conda.io/en/latest/) package manager, it could be done in a singe command:  
     `conda install -c conda-forge curl aria2 jq`
