@@ -34,8 +34,10 @@ azcopy copy \
   --recursive=true
 ```
 
+A list of snapshots with download links is available at [https://www.gbif.org/occurrence-snapshots](https://www.gbif.org/occurrence-snapshots).
+
 !!! warning "Limitations"
-    Currently, `arrow` v.10.0.0 does not support filtering of array-type columns. 
+    Currently, `arrow` v.10.0.0 does not support filtering of array-type columns.  
     E.g., it could be useful for removal of common geospatial issues in the data (see column `issue` in the parquet files).
 
 !!! example "For developers"
