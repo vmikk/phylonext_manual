@@ -4,10 +4,17 @@ description: >-
     Description of the input data used by PhyloNext.
 ---
 
-# Description of the input data used by PhyloNext
+# Obtaining the input data for PhyloNext
 
+## GBIF-mediated data in Parquet format
 
+GBIF provides monthly-based periodic snapshots of species occurrence records. 
+These snapshots are available on [Amazon S3](https://registry.opendata.aws/gbif/), [Google GCS](https://console.cloud.google.com/storage/browser/public-datasets-gbif), and [Microsoft Azure](https://planetarycomputer.microsoft.com/dataset/gbif) cloud storages. 
+Data are stored in [Apache Parquet](https://parquet.apache.org/) format files. 
+Parquet format allows running queries quickly and efficiently.
 
+!!! info "Data format"
+    For more information on the data format, see [the description of GBIF Public Datasets](https://github.com/gbif/occurrence/blob/master/aws-public-data.md).
 
 ## Obtaining a local snapshot of species occurrences from GBIF
 
