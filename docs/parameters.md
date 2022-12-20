@@ -328,6 +328,10 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     Whitespace is not allowed in taxonomic context! 
     Please replace space with underscore (e.g., "Seed plants" should be speciefied as `--taxgroup Seed_plants`).
 
+^3^:
+    In some cases, when there are no age estimates available for the phylogenetic tree nodes, 
+    automatic tree retrieval could fail. Therefore, it could be helpful to override the maximum node age to obtain the tree. 
+    Note, however, that in this case, units of some of the diversity indices (e.g., PD) become arbitrary.
 
 ## Generic options
 
