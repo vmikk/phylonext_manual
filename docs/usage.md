@@ -9,23 +9,23 @@ description: >-
 !!! info "Input data"
     For mode details, see the [input data](inputdata.md) description section in the documentation.
 
-## Help
+## Getting help
 
 To show a help message, run:
-```{bash}
+``` bash
 nextflow run vmikk/phylonext -r main --helpMsg
 ```
 
 ## Run test example
 
 Test run the pipeline using test data and Docker engine:
-```{bash}
+``` bash
 nextflow run vmikk/phylonext -r main -profile test,docker
 ```
 
 ## Example command
 
-```{bash}
+``` bash
 nextflow run vmikk/phylonext -r main \
   --input "/mnt/GBIF/Parquet/2022-01-01/occurrence.parquet/" \
   --classis "Mammalia" --family  "Felidae,Canidae" \
@@ -41,7 +41,7 @@ nextflow run vmikk/phylonext -r main \
 ## Passing in an input parameter file
 
 It is possible to pass the pipeline parameters via YAML or JSON file, e.g.:
-```
+``` bash
 nextflow run vmikk/phylonext -r main -resume -params-file Mammals.yaml
 ```
 
