@@ -168,3 +168,36 @@ aria2c \
     [**`curl`**](https://curl.se/), [**`jq`**](https://stedolan.github.io/jq/), and [**`aria2`**](https://aria2.github.io/).  
     If you are using [**`conda`**](https://docs.conda.io/en/latest/) package manager, it could be done in a singe command:  
     `conda install -c conda-forge curl aria2 jq`
+
+## Obtaining a list of specieskeys for extinct species
+
+To get a list of extinct species from GBIF, users may run the [`fetch_gbif_extinct_tax.py`](https://github.com/vmikk/PhyloNext/blob/main/bin/fetch_gbif_extinct_tax.py) script.
+
+Download the script:
+``` bash
+wget https://raw.githubusercontent.com/vmikk/biodiverse-scripts/main/bin/fetch_gbif_extinct_tax.py
+chmod +x fetch_gbif_extinct_tax.py
+```
+
+To use the script, please specify the GBIF taxon ID of the group of interest (e.g., 359 for [Mammalia](https://www.gbif.org/species/359)).
+``` bash
+## Reptilia [358]
+# https://www.gbif.org/species/358
+python fetch_gbif_extinct_tax.py 358 --outfile extinct_tax_ids_Reptilia.txt
+
+## Mammalia [359]
+# https://www.gbif.org/species/359
+python fetch_gbif_extinct_tax.py 359 --outfile extinct_tax_ids_Mammalia.txt
+
+## Amphibia  [131]
+# https://www.gbif.org/species/131
+python fetch_gbif_extinct_tax.py 131 --outfile extinct_tax_ids_Amphibia.txt
+
+## Birds - class Aves [212]
+# https://www.gbif.org/species/212
+python fetch_gbif_extinct_tax.py 212 --outfile extinct_tax_ids_Birds.txt
+
+## Tracheophyta [7707728]
+# https://www.gbif.org/species/7707728
+python fetch_gbif_extinct_tax.py 7707728 --outfile extinct_tax_ids_Tracheophyta.txt
+```
