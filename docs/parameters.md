@@ -255,10 +255,12 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 
 ## Phylogenetic tree-related parameters
 
-| Parameter     | Description                                                            | Type     | Default  |
-| ------------- | ---------------------------------------------------------------------- | -------- | -------- |
-| `--phylabels` | Type of tip labels on a phylogenetic tree ("OTT" or "Latin") ^1^       | `string` | Latin    |
-| `--taxgroup`  | Specific taxonomy group in Open Tree of Life (default, "All_life") ^2^ | `string` | All_life |
+| Parameter     | Description                                                             | Type      | Default  |
+| ------------- | ----------------------------------------------------------------------- | --------- | -------- |
+| `--phylabels` | Type of tip labels on a phylogenetic tree ("OTT" or "Latin") ^1^        | `string`  | Latin    |
+| `--taxgroup`  | Specific taxonomy group in Open Tree of Life (default, "All_life") ^2^  | `string`  | All_life |
+| `--maxage`    | Manually assign root age for a tree obtained from Open Tree of Life ^3^ | `number`  |          |
+| `--phyloonly` | Prune Open Tree tips for which there are no phylogenetic inputs ^4^     | `boolean` | false    |
 
 ^1^: 
     If a custom phylogenetic tree was provided by user (with `--phytree` parameter),
