@@ -45,3 +45,14 @@ The *Tasks* section lists all executed tasks, reporting the status, the actual c
 The same information is also stored in a tabular format in tab-delimited format (e.g., `execution_trace_*.txt`).
 ![Workflow task stats](docs/assets/Report_TaskStats.png){ align=left }
 
+
+**Execution tracing file** contains helpful information about each process, including submission time, start time, completion time, CPU, and memory used.
+![Timelime of the pipeline](docs/assets/Report_Timeline.png){ align=left }
+
+
+
+!!! info "Resource usage metrics"
+    To learn more about how resource usage is computed by Nextflow, see:  
+    [https://www.nextflow.io/docs/latest/tracing.html#trace-report](https://www.nextflow.io/docs/latest/tracing.html#trace-report) and  
+    [https://www.nextflow.io/docs/latest/metrics.html#metrics-page](https://www.nextflow.io/docs/latest/metrics.html#metrics-page)
+
