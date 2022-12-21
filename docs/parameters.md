@@ -345,7 +345,7 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 
 | Parameter          | Description                                                                | Type      | Default |
 | ------------------ | -------------------------------------------------------------------------- | --------- | ------- |
-| `--deriveddataset` | Export list of GBIF dataset keys for the filtered species occurrences. ^1^ | `boolean` | True    |
+| `--deriveddataset` | Export list of GBIF dataset keys for the filtered species occurrences ^1^  | `boolean` | True    |
 | `--helpMsg`        | Display help text (pipeline)                                               | `boolean` |         |
 
 ^1^: Could be used for citation and preparing a derived dataset with unique DOI.
@@ -357,10 +357,17 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     Parameters related to the Nextflow workflow manager starts with a single dash prefix (e.g., `-work-dir wd`)
 
 
-| Parameter  | Description                                                                                                   | Type      | Example     | Default                  |
-| ---------- | ------------------------------------------------------------------------------------------------------------- | --------- | ----------- | ------------------------ |
-| `-qs`      | Queue size (max number of processes that can be executed in parallel)                                         | `integer` | 8           | number of available CPUs |
-| `-w`       | Path to the working directory to store intermediate results                                                   | `string`  | "$(pwd)/wd" | "work"                   |
-| `-resume`  | Execute the pipeline using the cached results.<br>Useful to continue executions that was stopped by an error. |           |             |                          |
-| `-profile` | Configuration profile                                                                                         | `string`  | test,docker |                          |
+| Parameter      | Description                                                                                                  | Type      | Example        | Default                  |
+| -------------- | ------------------------------------------------------------------------------------------------------------ | --------- | -------------- | ------------------------ |
+| `-qs`          | Queue size (max number of processes that can be executed in parallel)                                        | `integer` | 8              | number of available CPUs |
+| `-w`           | Path to the working directory to store intermediate results                                                  | `string`  | "$(pwd)/wd"    | "work"                   |
+| `-resume`      | Execute the pipeline using the cached results.<br>Useful to continue executions that was stopped by an error |           |                |                          |
+| `-profile`     | Configuration profiles (set of configuration attributes) ^1^                                                 | `string`  | test,docker    |                          |
+| `-params-file` | Parameter file in YAML or JSON format ^1^                                                                    | `file`    | "Mammals.yaml" |                          |
+| `-c`           | Configuration file ^1^                                                                                       | `file`    |                | "nextflow.config"        |
 
+^1^:
+    For examples, see the `Configuration and profiles` and `Parameter file` sections in the [Usage](usage.md) documentation.
+
+!!! example "Configuration profiles"
+    For more information on Nextflow profiles, see [https://www.nextflow.io/docs/latest/config.html#config-profiles](https://www.nextflow.io/docs/latest/config.html#config-profiles).
