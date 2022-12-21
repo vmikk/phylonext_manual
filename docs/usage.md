@@ -99,6 +99,17 @@ It is possible to customize the number of CPUs required by the process task (see
 The total number of CPUs allowed to use by PhyloNext can be adjusted with `-qs` parameter (by default, all available CPUs will be used).
 
 
+## Configuration and profiles
+
+
+!!! tip "Multiple configs"
+    When a pipeline is launched, Nextflow looks for configuration files (and profiles) in multiple locations. 
+    The configs will be merged, and the settings in the config with higher priority will override the settings in the other configs. 
+    If you want to ignore any default configuration files and use only the custom one, use the `-C your.config` option (please note that the `C` letter is capitalized). 
+    For more details, see the [Configutation](https://www.nextflow.io/docs/latest/config.html#configuration) section in the Nextflow docs.
+
+## Parameter file
+
 It is possible to pass the pipeline parameters via YAML or JSON file, e.g.:
 ``` bash
 nextflow run vmikk/phylonext -r main -resume -params-file Mammals.yaml
@@ -147,8 +158,8 @@ nextflow drop vmikk/phylonext
 
 ## What's next?
 
-- Explore interactive maps (see Output file description)  
-- Manually configure static map using the output in GeoPackage format (see Postprocessing)  
-- Explore the results using Biodiverse program (see Postprocessing)  
-- Prepare citable derived dataset with unique DOI (see Postprocessing)  
+- Explore interactive maps (see [Output](outputs.md) file description)  
+- Manually configure static map using the output in GeoPackage format (see [Postprocessing](post.md))  
+- Explore the results using Biodiverse program (see [Postprocessing](post.md))  
+- Prepare citable derived dataset with unique DOI (see [Postprocessing](post.md))  
 
