@@ -48,7 +48,7 @@ and ship it all out as one package. This eliminates the need to worry about inst
 
 ### Ubuntu
 
-For for details see [the official Docker documentation](https://docs.docker.com/engine/install/ubuntu/).
+For more details see [the official Docker documentation](https://docs.docker.com/engine/install/ubuntu/).
 
 ```{bash}
 sudo apt-get update
@@ -74,12 +74,13 @@ Docker Desktop is an application for Windows that provides an easy-to-use interf
 It includes tools for building and deploying containerized applications, as well as for managing the lifecycle of containers.
 
 To install Docker on Windows, you will need to follow these steps:  
+
 - Download the Docker Desktop installer from the Docker website [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop)  
 - Double-click the installer to begin the installation process  
 - Follow the prompts to complete the installation. This will include accepting the terms of the license agreement and selecting the installation location  
 - Once the installation is complete, you will need to restart your computer to complete the installation process  
 
-For for details see [the Docker Desktop documentation](https://docs.docker.com/desktop/windows/wsl/).
+For more details see [the Docker Desktop documentation](https://docs.docker.com/desktop/windows/wsl/).
 
 ## 3. Download the pipeline and test it on a minimal dataset with a single command
 
