@@ -147,27 +147,37 @@ iterations : 100
 
 ## The other helpful commands
 
-Download or update the pipeline.  
-By default, the pipeline is stored in the `~/.nextflow/assets/vmikk/PhyloNext` directory
+To make sure that you're running the latest version of the pipeline, 
+you may download the latest version and update the pipeline using:  
 ``` bash
 nextflow pull vmikk/phylonext
 ```
+By default, the cached version of the pipeline is stored in the `~/.nextflow/assets/vmikk/PhyloNext` directory.
 
-Run the latest development version of the pipeline
+Run the latest development version of the pipeline (from the `main` branch of the code repository):
 ``` bash
 nextflow run vmikk/phylonext -r main ...
 ```
-Run the tagged version (e.g., v1.0) of the pipeline
+
+When executing PhyloNext on your data, it is a good idea to specify a version number for the pipeline. 
+This ensures that specific code revision and software dependencies are used. 
+Even if the codebase has changed, if you continue using the same tag, you will run the same pipeline version.  
+To find the latest version number, go to the [PhyloNext releases page](https://github.com/vmikk/PhyloNext/releases). 
+Then, when launching the pipeline, specify the version using `-r` flag (e.g., `-r v1.0`).
+This version number will be recorded in pipeline reports so you can later go back and know what version you used.  
+
+Run the tagged version (e.g., v1.0) of the pipeline:
 ``` bash
 nextflow run vmikk/phylonext -r v1.0 ...
 ```
-Print the pipeline and system runtime information
+
+Print the pipeline and system runtime information:
 ``` bash
 nextflow info
 nextflow info vmikk/phylonext
 ```
 
-Delete the local copy of the pipeline
+Delete the local copy of the pipeline:
 ``` bash
 nextflow drop vmikk/phylonext
 ```
