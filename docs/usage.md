@@ -34,7 +34,22 @@ nextflow run vmikk/phylonext -r main \
 ```
 This will launch the pipeline with the `docker` configuration profile. See below for more information about profiles.
 
-## Passing in an input parameter file
+Note that the pipeline will create the following files in your working directory:
+
+| Directory or file       | Description                                                                                 |
+| ----------------------- | ------------------------------------------------------------------------------------------- |
+| `00.filtered1.parquet`  | Parquet subset of the data                                                                  |
+| `01.filtered2`          | Data with spatial outliers removed, individually for each species in the dataset            |
+| `01.NumRecords`         | Counts of the number of records per grid cell                                               |
+| `02.Biodiverse_input`   | Table with species occurrences and phylogenetic tree, as well as input files for Biodiverse |
+| `02.Biodiverse_results` | Biodiverse output                                                                           |
+| `03.Plots`              | Data visualizations                                                                         |
+| `work`                  | Directory containing the Nextflow working files                                             |
+| `results`               | Pipeline execution reports and dataset DOIs                                                 |
+| `.nextflow_log`         | Log file from Nextflow                                                                      |
+
+For more details about output files, see the [Outputs](outputs.md) section of documentation.
+
 
 ## Workflow processes
 
