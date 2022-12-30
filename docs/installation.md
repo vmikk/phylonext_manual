@@ -42,6 +42,12 @@ mkdir -p ~/bin & mv ./nextflow ~/bin/
 
 ## 2. Install [`Docker`](https://docs.docker.com/engine/installation/)
 
+Docker is a tool designed to make it easier to create, deploy, and run applications by using containers. 
+Containers allow you to package an application with all of the parts it needs, such as libraries and other dependencies, 
+and ship it all out as one package. This eliminates the need to worry about installing and configuring the necessary dependencies on the host system.
+
+### Ubuntu
+
 For for details see [the official Docker documentation](https://docs.docker.com/engine/install/ubuntu/).
 
 ```{bash}
@@ -60,6 +66,20 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 sudo usermod -aG docker $USER
 newgrp docker
 ```
+
+### Windows
+
+It would be easier to use Docker Desktop WSL 2 backend on Windows. 
+Docker Desktop is an application for Windows that provides an easy-to-use interface for managing Docker containers. 
+It includes tools for building and deploying containerized applications, as well as for managing the lifecycle of containers.
+
+To install Docker on Windows, you will need to follow these steps:
+- Download the Docker Desktop installer from the Docker website [https://www.docker.com/products/docker-desktop](https://www.docker.com/products/docker-desktop).
+- Double-click the installer to begin the installation process.
+- Follow the prompts to complete the installation. This will include accepting the terms of the license agreement and selecting the installation location.
+- Once the installation is complete, you will need to restart your computer to complete the installation process.
+
+For for details see [the Docker Desktop documentation](https://docs.docker.com/desktop/windows/wsl/).
 
 ## 3. Download the pipeline and test it on a minimal dataset with a single command
 
