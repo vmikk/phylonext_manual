@@ -9,13 +9,6 @@ description: >-
 !!! info "Input data"
     For mode details, see the [input data](inputdata.md) description section in the documentation.
 
-## Getting help
-
-To show a help message, run:
-``` bash
-nextflow run vmikk/phylonext -r main --helpMsg
-```
-
 ## Run test example
 
 Test run the pipeline using test data and Docker engine:
@@ -23,7 +16,9 @@ Test run the pipeline using test data and Docker engine:
 nextflow run vmikk/phylonext -r main -profile test,docker
 ```
 
-## Example command
+## Running the pipeline
+
+The typical command for running the pipeline is as follows:  
 
 ``` bash
 nextflow run vmikk/phylonext -r main \
@@ -32,11 +27,12 @@ nextflow run vmikk/phylonext -r main \
   --country "DE,PL,CZ"  \
   --minyear 2000  \
   --dbscan true  \
-  --phytree  $(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/test_data/phy_trees/Mammals.nwk") \
   --iterations 100  \
   --outdir "$PWD" \
-  -resume
+  -resume \
+  -profile docker
 ```
+This will launch the pipeline with the `docker` configuration profile. See below for more information about profiles.
 
 ## Passing in an input parameter file
 
@@ -98,6 +94,13 @@ In some cases, the task will be divided into chunks and run in parallel
 It is possible to customize the number of CPUs required by the process task (see `Configuration` below). 
 The total number of CPUs allowed to use by PhyloNext can be adjusted with `-qs` parameter (by default, all available CPUs will be used).
 
+
+## Getting help
+
+To show a help message, run:
+``` bash
+nextflow run vmikk/phylonext -r main --helpMsg
+```
 
 ## Configuration and profiles
 
