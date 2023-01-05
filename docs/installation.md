@@ -67,6 +67,10 @@ sudo usermod -aG docker $USER
 newgrp docker
 ```
 
+!!! note "Docker via package manager"
+    Alternatively, one can install Docker via the system's package manager (e.g. `Ubuntu Software Center`).
+
+
 ### Windows
 
 It would be easier to use Docker Desktop WSL 2 backend on Windows. 
