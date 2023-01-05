@@ -188,8 +188,9 @@ Therefore, parameter values should correspond to the Biodiverse values.
 | `--randname`          | Randomisation scheme type                                                  | `string`  | "rand_structured"               | "rand_structured"                                                                                                                         |
 
 ^1^: 
-    Comma-seprated list of metrics. More than 350 indices are supported. 
-    For details see [Biodiverse manual](https://github.com/shawnlaffan/biodiverse/wiki/Indices).
+    Comma-separated list of metrics. More than 350 indices are supported. 
+    For details see [Biodiverse manual](https://github.com/shawnlaffan/biodiverse/wiki/Indices).  
+    The most common indices are listed here: (`Diversity indices`)[biodiverse.md].  
 
 ## Visualization - interactive
 
