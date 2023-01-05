@@ -20,17 +20,17 @@ The following installation instruction is for Ubuntu.
 
 Nextflow (`>=22.10.0`) requires Java 11 (or later, up to 18) to be installed.
 
-```{bash}
+``` bash
 sudo apt-get update
 sudo apt-get install default-jdk
 ```
 
 Install Nextflow:
 
-```{bash}
+``` bash
 wget -qO- https://get.nextflow.io | bash
 chmod +x ./nextflow
-mkdir -p ~/bin & mv ./nextflow ~/bin/
+mkdir -p ~/bin & mv ./nextflow ~/bin
 ```
 
 !!! note "Conda"
@@ -50,7 +50,7 @@ and ship it all out as one package. This eliminates the need to worry about inst
 
 For more details see [the official Docker documentation](https://docs.docker.com/engine/install/ubuntu/).
 
-```{bash}
+``` bash
 sudo apt-get update
 sudo apt-get install ca-certificates curl gnupg lsb-release
 
@@ -84,6 +84,6 @@ For more details see [the Docker Desktop documentation](https://docs.docker.com/
 
 ## 3. Download the pipeline and test it on a minimal dataset with a single command
 
-```{bash}
+``` bash
 nextflow run vmikk/phylonext -r main -profile test,docker
 ```
