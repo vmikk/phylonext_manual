@@ -53,3 +53,18 @@ The output will contain all metrics estimated by these subroutines (`PD`, `PD_P`
 
 ^2^: 
     Must be specified with `--indices` parameter in the Phylonext pipeline.
+
+## Effect sizes
+
+Standardized effect sizes (SES; a.k.a. Z-scores) can be used to compare phylogenetic diversity of different communities. 
+In general, SES is a measure of the deviation of the observed community structure from that expected under a null model of random species distribution. 
+The null model is obtained by estimating the diversity index of interest by simulating multiple random communities (of the same size).
+SES can be computed for different diversity metrics. 
+The most commonly known metrics are NRI (net relatedness index = SES for MPD) and NTI (nearest taxon index = SES for MNTD).  
+
+By default, PhyloNext estimates SES for most of the supported indices. 
+To visualize these metrics, user may add `SES_` prefix to the index name (e.g., `--leaflet_var SES_PD`).
+
+!!! info "Standardized effect sizes"
+    For more information about standardized effect sizes, see:  
+    Webb CO, Ackerly DA, Kembel SW. Phylocom: software for the analysis of phylogenetic community structure and trait evolution, Bioinformatics, V. 24 (18), P. 2098–2100. [DOI:10.1093/bioinformatics/btn358](https://academic.oup.com/bioinformatics/article/24/18/2098/190910)
