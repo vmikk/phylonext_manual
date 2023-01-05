@@ -57,3 +57,25 @@ echo "export PATH=$HOME/bin:$PATH" >> ~/.bashrc
     E.g., for `zsh` it should be `~/.zshrc`.  
     To know which shell are you using, run `echo $SHELL`
 
+
+## Docker permissions
+
+!!! error "Docker - permission denied"
+    `docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create?name=nxf-Cz6yqNjGI9AhRpsqkU4mSAHC": dial unix /var/run/docker.sock: connect: permission denied.`
+
+Most likely, you forgot to add your user to the `docker` group and you need a super-user privileges to execute the container.  
+To fix this error, run:  
+
+``` bash
+# Create the docker group.
+sudo groupadd docker
+
+#  Add your user to the docker group.
+sudo usermod -aG docker ${USER}
+
+# Log out and log back in so that your group membership is re-evaluated.
+# Alternatively, to skip logging out, type the following command:  su -s ${USER}
+
+# Verify that you can run docker commands without sudo
+docker run hello-world
+```
