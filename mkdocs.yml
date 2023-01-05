@@ -57,6 +57,7 @@ nav:
   - 'Input data':           'inputdata.md'
   - 'Output overview':      'outputs.md'
   - 'Pipeline parameters':  'parameters.md'
+  - 'Diversity indices':    'biodiverse.md'
   - 'Troubleshooting':      'troubleshooting.md'
   - 'Web GUI':              'webgui.md'
   - 'Post processing':      'post.md'
