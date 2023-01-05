@@ -79,3 +79,14 @@ sudo usermod -aG docker ${USER}
 # Verify that you can run docker commands without sudo
 docker run hello-world
 ```
+
+## PhyloNext containers
+
+If for some reason Nextflow is not able to download containers for PhyloNext, 
+it's possible to pull them manually using:
+
+``` bash
+docker pull vmikk/rarrow:1.0.0
+docker pull vmikk/biodiverse:1.0.0
+docker pull vmikk/opentree:0.0.2
+```
