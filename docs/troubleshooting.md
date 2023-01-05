@@ -80,6 +80,18 @@ sudo usermod -aG docker ${USER}
 docker run hello-world
 ```
 
+## Docker and WSL2
+
+!!! error "Docker and WSL2"
+    `The command 'docker' could not be found in this WSL 2 distro. We recommend to activate the WSL integration in Docker Desktop settings.`
+
+Try to enable `Use the WSL2 based engine` in the `Docker Desktop` settings.  
+
+<a class="zoom" href="/assets/DokerDesktop_WSL2.png">
+![WSL2 Docker Engine](/assets/DokerDesktop_WSL2.png)
+</a>
+
+
 ## PhyloNext containers
 
 If for some reason Nextflow is not able to download containers for PhyloNext, 
