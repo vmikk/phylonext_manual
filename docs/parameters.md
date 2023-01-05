@@ -198,7 +198,7 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 
 | Parameter              | Description                                                                   | Type      | Example     | Default                                                                              |
 | ---------------------- | ----------------------------------------------------------------------------- | --------- | ----------- | ------------------------------------------------------------------------------------ |
-| `--leaflet_var`        | Diversity and endemism indices to estimate ^1^                                | `string`  | "PD,SES_PD" | "RICHNESS_ALL,PD,SES_PD,PD_P,ENDW_WE,SES_ENDW_WE,PE_WE,SES_PE_WE,CANAPE,Redundancy" |
+| `--leaflet_var`        | Diversity and endemism indices to estimate ^1^                                | `string`  | "PD,SES_PD" | "RICHNESS_ALL,PD,SES_PD,PD_P,ENDW_WE,SES_ENDW_WE,PE_WE,SES_PE_WE,PE_CWE,SES_PE_CWE,CANAPE,Redundancy" |
 | `--leaflet_color`      | Color scheme for continuous variables  ^2^                                    | `string`  | "RdYlBu"    | "RdYlBu"                                                                             |
 | `--leaflet_palette`    | Color palette for continuous variables ^3^                                    | `string`  | "quantile"  | "quantile"                                                                           |
 | `--leaflet_bins`       | Number of color bins for continuous variables                                 | `integer` | 5           | 5                                                                                    |
