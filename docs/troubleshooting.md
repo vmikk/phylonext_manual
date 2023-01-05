@@ -30,3 +30,30 @@ to
 ```
 
 See the `Configuration` section in the [usage documentation](usage.md).
+# Installation problems
+
+## Nextflow not found
+
+!!! error "Command not found"
+    `command not found: nextflow`
+
+If you installed Nextflow in the `~/bin` directory, most likely, it is not added to your PATH environment variable. 
+To fix it, run the following command:
+
+``` bash
+export PATH="$HOME/bin:$PATH"
+```
+and try to execute Nextflow again.  
+
+If it works, you may add this command to the `~/.bashrc` file to make these changes permanent. 
+To do it from the command line, run:  
+
+``` bash
+echo "export PATH=$HOME/bin:$PATH" >> ~/.bashrc
+```
+
+!!! example "Notes on shells other than bash"
+    If you are using a shell other than `bash`, please .  
+    E.g., for `zsh` it should be `~/.zshrc`.  
+    To know which shell are you using, run `echo $SHELL`
+
