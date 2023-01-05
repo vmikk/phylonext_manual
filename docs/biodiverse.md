@@ -68,3 +68,24 @@ To visualize these metrics, user may add `SES_` prefix to the index name (e.g., 
 !!! info "Standardized effect sizes"
     For more information about standardized effect sizes, see:  
     Webb CO, Ackerly DA, Kembel SW. Phylocom: software for the analysis of phylogenetic community structure and trait evolution, Bioinformatics, V. 24 (18), P. 2098–2100. [DOI:10.1093/bioinformatics/btn358](https://academic.oup.com/bioinformatics/article/24/18/2098/190910)
+
+
+## Special indices
+
+Several metrics are calculated internally by PhyloNext. 
+To show them on a map, user may add them to the `--leaflet_var` parameter.  
+
+| Index name | Description                                                                              |
+| ---------- | ---------------------------------------------------------------------------------------- |
+| CANAPE     | Categorical Analysis of Neo and Palaeo Endemism                                          |
+| Redundancy | Measure of sampling completeness (ratio of species richness and the number of records)   |
+
+
+!!! info "CANAPE"
+    For more information about the CANAPE method, see:  
+    Mishler BD, Knerr N, González-Orozco CE, Thornhill AH, Laffan CW, Miller JT (2014) Phylogenetic measures of biodiversity and neo- and paleo-endemism in Australian Acacia. Nat Commun 5, 4473. [DOI:10.1038/ncomms5473](https://www.nature.com/articles/ncomms5473)
+
+!!! info "Redundancy"
+    For more information about the redundancy index, see:  
+    Mishler BD, Guralnick R, Soltis PS, Smith SA, Soltis DE, Barve N, Allen JM, Laffan SW (2020) Spatial phylogenetics of the North American flora. J. Syst. Evol., 58: 393-405. DOI:10.1111/jse.12590](https://onlinelibrary.wiley.com/doi/full/10.1111/jse.12590)
+
