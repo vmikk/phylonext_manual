@@ -12,7 +12,7 @@ Common issues and solutions users might run into while using PhyloNext.
 
 ## The number of available CPUs
 
-!!! error "Number of CPUs required"
+!!! failure "Number of CPUs required"
     `Process requirement exceeds available CPUs -- req: 10; avail: 8`
 
 Most likely, the number of CPUs configured for a process is larger than available on your system. 
@@ -34,7 +34,7 @@ See the `Configuration` section in the [usage documentation](usage.md).
 
 ## Nextflow not found
 
-!!! error "Command not found"
+!!! failure "Command not found"
     `command not found: nextflow`
 
 If you installed Nextflow in the `~/bin` directory, most likely, it is not added to your PATH environment variable. 
@@ -60,7 +60,7 @@ echo "export PATH=$HOME/bin:$PATH" >> ~/.bashrc
 
 ## Docker permissions
 
-!!! error "Docker - permission denied"
+!!! failure "Docker - permission denied"
     `docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create?name=nxf-Cz6yqNjGI9AhRpsqkU4mSAHC": dial unix /var/run/docker.sock: connect: permission denied.`
 
 Most likely, you forgot to add your user to the `docker` group and you need a super-user privileges to execute the container.  
@@ -82,7 +82,7 @@ docker run hello-world
 
 ## Docker and WSL2
 
-!!! error "Docker and WSL2"
+!!! failure "Docker and WSL2"
     `The command 'docker' could not be found in this WSL 2 distro. We recommend to activate the WSL integration in Docker Desktop settings.`
 
 Try to enable `Use the WSL2 based engine` in the `Docker Desktop` settings.  
