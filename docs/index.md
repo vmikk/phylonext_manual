@@ -41,8 +41,11 @@ Description of the input data used by pipeline.
 [Output Overview](outputs.md)  
 Overview of PhyloNext output.
 
-[Parameters](parameters.md)  
+[Pipeline parameters](parameters.md)  
 The full set of parameters that users can tweak in PhyloNext.
+
+[Diversity indices](biodiverse.md)  
+A list of the most common diversity indices.
 
 [Troubleshooting](troubleshooting.md)  
 Handling errors.

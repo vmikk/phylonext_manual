@@ -11,7 +11,7 @@ Here you will find a short list of the most common indices and a way to specify 
 
 !!! note "Indices supported by Biodiverse"
     For details see the Biodiverse manual here:  
-    [https://github.com/shawnlaffan/biodiverse/wiki/Indices](https://github.com/shawnlaffan/biodiverse/wiki/Indices).  
+    [https://github.com/shawnlaffan/biodiverse/wiki/Indices](https://github.com/shawnlaffan/biodiverse/wiki/Indices)  
 
 
 In Biodiverse, indices are organized into groups by *"subroutines"* (functions) used to generate them. 
