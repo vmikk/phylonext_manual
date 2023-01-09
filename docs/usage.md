@@ -53,6 +53,14 @@ Note that the pipeline will create the following files in your working directory
 
 For more details about output files, see the [Outputs](outputs.md) section of documentation.
 
+## Workflow caching and checkpointing
+
+All intermediate results of the pipeline run are stored in the `work` and `.nextflow` directories. 
+To restart a pipeline following an error from the most recent successfully executed process, use the '-resume' flag. 
+This way, Nextflow will use cached results from any pipeline steps where the inputs are the same, continuing from where it strop previously. 
+This option could also be helpful if you wish to change some of the parameters of downstream processes and will allow reusing results of upstream steps.  
+
+Without `-resume`, Nextflow will start the workflow from scratch and overwrite all previous results.  
 
 ## Built-in data
 
