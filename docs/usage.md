@@ -117,6 +117,16 @@ During the pipeline execution, you will see a progress indicator in the output i
 [6a/ca28a8] process > derived_datasets      [100%] 1 of 1 ✔
 ```
 
+Processes are run in parallel and start as soon as their input data becomes available. 
+Pipeline scripts are executed by Nextflow in a separate working directory. 
+Each working directory contains input files (symbolic links in case of running the pipeline locally), as well as results and log files.
+
+!!! info ""
+    In case of pipeline failure, it could be useful to inspect logs for a failed task.  
+    E.g., working directory for the `occ_filter` is located in `./work/ad/02689a...`  
+    and contains a log file `.command.log`.  
+
+Processes description:  
 
 | Process name            | Description                                                                                              | CPUs per task ^1^ |
 | ----------------------- | -------------------------------------------------------------------------------------------------------- | ----------------- |
@@ -146,7 +156,6 @@ In some cases, the task will be divided into chunks and run in parallel
 (e.g., estimation of standardized effect sizes - 10 processes with 100 randomization iterations each). 
 It is possible to customize the number of CPUs required by the process task (see `Configuration` below). 
 The total number of CPUs allowed to use by PhyloNext can be adjusted with `-qs` parameter (by default, all available CPUs will be used).
-
 
 ## Getting help
 
