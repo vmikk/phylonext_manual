@@ -251,6 +251,10 @@ Available profiles include:
 If `-profile` is not specified, the pipeline will run locally and expect all software to be installed and available on the `PATH`. 
 This is _not_ recommended.  
 
+It is worth noting that multiple profiles can be loaded, for example: `-profile test,docker`. 
+Please keep in mind that the order of arguments is important! 
+Profiles are loaded in sequential order so that the later profile will overwrite earlier profiles.  
+
 !!! info "Cluster and cloud executors"
     To create a profile for running PhyloNext on HPC (e.g., using SLURM) or cloud (e.g., Azure Batch or AWS Batch), 
     please address Nextflow documentation - [Executor section](https://www.nextflow.io/docs/latest/executor.html)
