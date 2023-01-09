@@ -130,10 +130,9 @@ Processes are run in parallel and start as soon as their input data becomes avai
 Pipeline scripts are executed by Nextflow in a separate working directory. 
 Each working directory contains input files (symbolic links in case of running the pipeline locally), as well as results and log files.
 
-!!! info ""
+!!! info "Log files"
     In case of pipeline failure, it could be useful to inspect logs for a failed task.  
-    E.g., working directory for the `occ_filter` is located in `./work/ad/02689a...`  
-    and contains a log file `.command.log`.  
+    E.g., working directory for the `occ_filter` is located in `./work/ad/02689a...`  and contains a log file `.command.log`.  
 
 Processes description:  
 
