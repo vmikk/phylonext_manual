@@ -195,6 +195,35 @@ dbscan     : true
 phytree    : "/path/to/the/phylogenetic/tree.nwk"
 iterations : 100
 ```
+
+### Configuration file
+
+While the default requirements set within the pipeline will hopefully work for most people and with most input data, 
+you may want to customize the compute resources that the pipeline requests. 
+Each step in the pipeline has a default set of requirements for the number of CPUs 
+(and optionally, RAM and execution time - which could be important for executing PhyloNext on the HPC cluster).  
+
+To adjust the resource usage (e.g., the number of CPUs required by the `occ_filter` process), 
+you may create a custom configuration file (e.g., `my.config`) of the form:  
+
+``` java
+process {
+
+    // Occurrence filtering, stage I
+    withName:occ_filter{
+        cpus = 10
+    }
+}
+```
+
+Then, use the `-c` option to choose the created configuration file while running the pipeline. E.g.,  
+``` bash
+nextflow run vmikk/phylonext ... -c my.config
+```
+
+!!! info "Configs"
+    For more information, see the Nextflow documentation - [Configuration](https://www.nextflow.io/docs/latest/config.html#configuration-file).
+
 !!! tip "Multiple configs"
     When a pipeline is launched, Nextflow looks for configuration files (and profiles) in multiple locations. 
     The configs will be merged, and the settings in the config with higher priority will override the settings in the other configs. 
