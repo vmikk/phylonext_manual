@@ -103,7 +103,8 @@ Workflow managers such as Nextflow are designed to help users run complex pipeli
 potentially involving multiple steps and dependencies between them, efficiently and reproducibly. 
 One of the key features of such tools is the ability to run processes in parallel, 
 which can reduce the overall time taken to complete a workflow by distributing the workload across multiple computational resources. 
-To run the pipeline effectively and maximize resource utilization, Nextflow will:
+To run the pipeline effectively and maximize resource utilization, Nextflow will:  
+
 - Effectively and automatically allocate CPUs on the available computational resources (local, a cluster, or a cloud environment);
 - Use a scheduling algorithm to determine the order in which processes should be run based on the dependencies between them and the availability of resources.
 
