@@ -174,6 +174,8 @@ nextflow run vmikk/phylonext -r main --helpMsg
 
 ## Configuration and profiles
 
+Nextflow has a very flexible pipeline configuration system that supports multiple options 
+such as parameter files, configuration files, and profiles.  
 
 !!! tip "Multiple configs"
     When a pipeline is launched, Nextflow looks for configuration files (and profiles) in multiple locations. 
