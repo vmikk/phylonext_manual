@@ -296,6 +296,59 @@ Delete the local copy of the pipeline:
 nextflow drop vmikk/phylonext
 ```
 
+## Docker and Singularity containers
+
+Ready-to-use containers with all software dependencies required for PhyloNext 
+are hosted on [Docker Hub](https://hub.docker.com/r/vmikk/biodiverse) and 
+[Singularity Library](https://cloud.sylabs.io/library/vmiks/gbif/biodiverse).  
+
+If you need to use a different version of a tool with the pipeline, 
+you may re-build the default containers and override the location of a container in a custom configuration file. 
+PhyloNext currently relies on three containers and refers to them using process labels.  
+
+| Process Label          | Default Docker container | Docker file                                                                             | Default Singularity container           | Singularity definition file                                                                  |
+| ---------------------- | ------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `container_r`          | `vmikk/rarrow:1.0.0`     | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/R_arrow.dockerfile)  | `library://vmiks/gbif/rarrow:1-0-0`     | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/R_arrow_Singularity.def)  |
+| `container_biodiverse` | `vmikk/biodiverse:1.0.0` | [Link](https://github.com/vmikk/biodiverse-docker/blob/main/Dockerfile_NoPerlbrew)      | `library://vmiks/gbif/biodiverse:1-0-0` | [Link](https://github.com/vmikk/biodiverse-docker/blob/main/SingularityDef_NoPerlbrew.def)   |
+| `container_ott`        | `vmikk/opentree:0.0.2`   | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/OpenTree.dockerfile) | `library://vmiks/gbif/opentree:1-0-0`   | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/OpenTree_Singularity.def) |
+
+The configuration file has the following format and must be adjusted if you would like to use custom containers:  
+
+``` java
+process {
+
+    withLabel: 'container_r' {
+        container = 'vmikk/rarrow:1.0.0'
+    }
+
+    withLabel: 'container_biodiverse' {
+        container = 'vmikk/biodiverse:1.0.0'
+    }
+
+    withLabel: 'container_ott' {
+        container = 'vmikk/opentree:0.0.2'
+    }
+
+}
+```
+
+### Docker image
+
+To build the [Docker](https://www.docker.com/) image with Biodiverse (`container_biodiverse`), run:
+``` bash
+git clone https://github.com/vmikk/biodiverse-docker
+cd biodiverse-docker
+docker build --tag biodiverse --file Dockerfile_NoPerlbrew . 
+```
+
+### Singularity image
+
+To build the [Singularity](https://sylabs.io/singularity/) image with Biodiverse run:
+``` bash
+git clone https://github.com/vmikk/biodiverse-docker
+cd biodiverse-docker
+sudo singularity build Biodiverse.sif SingularityDef_NoPerlbrew.def
+```
 
 
 ## What's next?
