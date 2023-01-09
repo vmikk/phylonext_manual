@@ -54,6 +54,41 @@ Note that the pipeline will create the following files in your working directory
 For more details about output files, see the [Outputs](outputs.md) section of documentation.
 
 
+## Built-in data
+
+PhyloNext pipeline contains several files for removing spatial outliers or data subsetting.  
+By default, built-in data is stored in the folder `${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/`.
+
+| File                                  | Description                                             | Citation                                                                                      |
+| ------------------------------------- | ------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
+| `Land_Buffered_025_dgr.RData`         | Land polygon for removal of non-terrestrial occurrences | [Natural Earth](https://www.naturalearthdata.com/)                                            |
+| `CC_CountryCentroids_buf_1000m.RData` | Polygons with country and province centroids            | [Zizka et al., 2019](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13152) |
+| `CC_Capitals_buf_10000m.RData`        | Polygons with country capitals                          | [Zizka et al., 2019](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13152) |
+| `CC_Institutions_buf_100m.RData`      | Polygons with biological institutions and museums       | [Zizka et al., 2019](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13152) |
+| `CC_Urban.RData`                      | Polygons with urban areas                               | [Natural Earth](https://www.naturalearthdata.com/)                                            |
+| `WGSRPD.RData`                        | Polygons of World Geographical Regions                  | [WGSRPD](https://www.tdwg.org/standards/wgsrpd/)                                              |
+| `WorldMap_NaturalEarth_Medium.RData`  | World map                                               | [Natural Earth](https://www.naturalearthdata.com/)                                            |
+
+To use the built-in data, provide a full path to the data.  
+E.g., to remove records from urban areas, add the following parameter to your command:  
+`--rmurban ${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/CC_Urban.RData`.  
+Alternatively, you may use custom files prepared in the same format.
+
+To remove common spatial errors from the data, PhyloNext uses databases 
+from the [`CoordinateCleaner`](https://ropensci.github.io/CoordinateCleaner/) R package by Alexander Zizka. 
+The following buffers were added to the datasets because coordinates in a database could be slightly inaccurate due to errors: 
+
+- Country and province centroids - 1 km buffer  
+- Capital coordinates - 10 km buffer  
+- Coordinates of biodiversity institutions - 100 m buffer  
+
+
+For the removal of non-terrestrial samples, PhyloNext uses a shapefile from [Natural Earth](https://www.naturalearthdata.com/),
+with a 0.25-degree buffer (corresponding to ~27 km distance, which is approximately half of the H3 grid cell at resolution 4).  
+
+Please cite any datasets if you have used them in your analysis.  
+
+
 ## Workflow processes
 
 Workflow managers such as Nextflow are designed to help users run complex pipelines of processes, 
