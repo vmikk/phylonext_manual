@@ -331,6 +331,8 @@ process {
 
 }
 ```
+Containers can either be pulled from the web (e.g., use `youraccount/containername` to get it from Docker Hub), 
+or you may use local files (specify tag name for Docker, or a full path to the Singularity file).  
 
 ### Docker image
 
@@ -343,7 +345,7 @@ docker build --tag biodiverse --file Dockerfile_NoPerlbrew .
 
 ### Singularity image
 
-To build the [Singularity](https://sylabs.io/singularity/) image with Biodiverse run:
+To build the [Singularity](https://sylabs.io/singularity/) image with Biodiverse (`container_biodiverse`), run:
 ``` bash
 git clone https://github.com/vmikk/biodiverse-docker
 cd biodiverse-docker
@@ -351,10 +353,24 @@ sudo singularity build Biodiverse.sif SingularityDef_NoPerlbrew.def
 ```
 
 
+## Running on HPC
+
+If you would like to run PhyloNext on HPC cluster, Nextflow can handle job submissions and supervise the running jobs. 
+In this case the Nextflow process must run until the pipeline is finished. 
+For this purpose you may either use `tmux` or `screen` to create a detached terminal session which you can log back into at a later time. 
+Or you may submit Nextflow process using your job scheduler (e.g., SLURM), from where Nextlow will start submitting the other jobs. 
+You can also use the `-bg` flag to launch Nextflow in the background to avoid blocking your current session.  
+
+Depending on the number of tasks, in some cases, the Nextflow Java virtual machines can require a large amount of memory. 
+To specify the RAM limits, you may create the following environmental variable before running Nextflow:  
+
+``` bash
+NXF_OPTS='-Xms1g -Xmx4g'
+```
+
 ## What's next?
 
 - Explore interactive maps (see [Output](outputs.md) file description)  
 - Manually configure static map using the output in GeoPackage format (see [Postprocessing](post.md))  
 - Explore the results using Biodiverse program (see [Postprocessing](post.md))  
 - Prepare citable derived dataset with unique DOI (see [Postprocessing](post.md))  
-
