@@ -32,7 +32,7 @@ The pipeline could be launched in a cloud environment (e.g., the [Microsoft Azur
 [Installation](installation.md)  
 More detailed information for getting PhyloNext set up on your system.
 
-[Basic Usage](usage.md)  
+[Usage instructions](usage.md)  
 A subset of parameters users may commonly adjust.
 
 [Input data](inputdata.md)  
