@@ -181,6 +181,31 @@ nextflow run vmikk/phylonext -r main --helpMsg
     If you want to ignore any default configuration files and use only the custom one, use the `-C your.config` option (please note that the `C` letter is capitalized). 
     For more details, see the [Configutation](https://www.nextflow.io/docs/latest/config.html#configuration) section in the Nextflow docs.
 
+### Profiles
+
+Nextflow profiles can be used as configuration presets for different compute environments.  
+
+We highly recommend using Docker or Singularity containers for full pipeline reproducibility. 
+For this, several generic profiles are bundled with the pipeline, instructing PhyloNext to use software that is packaged in the containers.  
+Available profiles include:
+
+| Profile name   | Description                                                                                                 |
+| -------------- | ----------------------------------------------------------------------------------------------------------- |
+| `docker`       | A generic configuration profile to be used with [Docker](https://docker.com/)                               |
+| `singularity`  | A generic configuration profile to be used with [Singularity](https://sylabs.io/docs/)                      |
+| `test` ^1^     | A profile with a complete configuration for automated testing (built-in phylogenetic tree)                  |
+| `test_ott` ^1^ | A profile with a complete configuration for automated testing (phylogenetic tree will be fetched from OToL) |
+
+^1^:
+    Test profiles include links to test data and do not require any other parameters to be specified.
+
+If `-profile` is not specified, the pipeline will run locally and expect all software to be installed and available on the `PATH`. 
+This is _not_ recommended.  
+
+!!! info "Cluster and cloud executors"
+    To create a profile for running PhyloNext on HPC (e.g., using SLURM) or cloud (e.g., Azure Batch or AWS Batch), 
+    please address Nextflow documentation - [Executor section](https://www.nextflow.io/docs/latest/executor.html)
+
 ## Parameter file
 
 It is possible to pass the pipeline parameters via YAML or JSON file, e.g.:
