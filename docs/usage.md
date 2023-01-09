@@ -177,6 +177,24 @@ nextflow run vmikk/phylonext -r main --helpMsg
 Nextflow has a very flexible pipeline configuration system that supports multiple options 
 such as parameter files, configuration files, and profiles.  
 
+### Parameter file
+
+As the number of parameters can be quite large, it is possible to pass the pipeline parameters via YAML or JSON file, e.g.:
+``` bash
+nextflow run vmikk/phylonext -r main -resume -params-file Mammals.yaml
+```
+
+The YAML file could contain the following:
+``` yaml
+input      : "/mnt/GBIF/Parquet/2022-01-01/occurrence.parquet/"
+classis    : "Mammalia"
+family     : "Felidae,Canidae"
+country    : "DE,PL,CZ"
+minyear    : 2000
+dbscan     : true
+phytree    : "/path/to/the/phylogenetic/tree.nwk"
+iterations : 100
+```
 !!! tip "Multiple configs"
     When a pipeline is launched, Nextflow looks for configuration files (and profiles) in multiple locations. 
     The configs will be merged, and the settings in the config with higher priority will override the settings in the other configs. 
@@ -207,25 +225,6 @@ This is _not_ recommended.
 !!! info "Cluster and cloud executors"
     To create a profile for running PhyloNext on HPC (e.g., using SLURM) or cloud (e.g., Azure Batch or AWS Batch), 
     please address Nextflow documentation - [Executor section](https://www.nextflow.io/docs/latest/executor.html)
-
-## Parameter file
-
-It is possible to pass the pipeline parameters via YAML or JSON file, e.g.:
-``` bash
-nextflow run vmikk/phylonext -r main -resume -params-file Mammals.yaml
-```
-
-The YAML file could contain the following:
-``` yaml
-input      : "/mnt/GBIF/Parquet/2022-01-01/occurrence.parquet/"
-classis    : "Mammalia"
-family     : "Felidae,Canidae"
-country    : "DE,PL,CZ"
-minyear    : 2000
-dbscan     : true
-phytree    : "/path/to/the/phylogenetic/tree.nwk"
-iterations : 100
-```
 
 ## The other helpful commands
 
