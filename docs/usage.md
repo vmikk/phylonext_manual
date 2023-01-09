@@ -1,5 +1,5 @@
 ---
-title: Basic Usage
+title: Usage instructions
 description: >-
     An overview of PhyloNext parameters you might need to adjust to meet your needs.
 ---
@@ -32,9 +32,12 @@ nextflow run vmikk/phylonext -r main \
   -resume \
   -profile docker
 ```
-This will launch the pipeline with the `docker` configuration profile. See below for more information about profiles.
+This will launch the pipeline with the `docker` configuration profile (see below for more information about profiles).
 
-Note that the pipeline will create the following files in your working directory:
+!!! info "Parameters"
+    All parameters are listed in the (`Parameters`)[parameters.md] section of the documentation.  
+
+Note that the pipeline will create the following files in your working directory:  
 
 | Directory or file       | Description                                                                                 |
 | ----------------------- | ------------------------------------------------------------------------------------------- |
