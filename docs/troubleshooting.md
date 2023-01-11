@@ -9,6 +9,17 @@ Common issues and solutions users might run into while using PhyloNext.
 !!! bug "Don't see your error/bug? Post an issue on GitHub"
     If you've encountered an error or bug not seen here, please post an issue at [PhyloNext GitHub Issues](https://github.com/vmikk/PhyloNext/issues). This will help greatly to track down the error and fix it!
 
+# Pipeline errors
+
+## Resume the workflow
+
+!!! failure "Pipeline was interrupted"
+    Any accidental failure - e.g., you closed the terminal, rebooted your computer, or the task was killed by a scheduler on HPC.
+
+If the pipeline is interrupted, it can be resumed without having to start from scratch.
+Add the `-resume` flag to your command, and Nextflow will start the workflow from the last successfully executed process, 
+retrieving all previous results from the cache.
+
 
 ## The number of available CPUs
 
