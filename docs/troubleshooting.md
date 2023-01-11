@@ -30,6 +30,18 @@ to
 ```
 
 See the `Configuration` section in the [usage documentation](usage.md).
+
+## Pipeline revision version
+
+!!! failure "Pipeline revision version"
+    ```
+    Project \`vmikk/phylonext\` is currently stickied on revision: main -- you need to explicitly specify a revision with the option \`-r\` in order to use it
+    ```
+
+Solution - specify a version number of the pipeline.  
+To run the latest version, add `-r main` to your command.  
+Alternatively, you may specify the exact version (or tag) you wish, e.g. `-r v.0.0.2`.  
+
 # Installation problems
 
 ## Nextflow not found
