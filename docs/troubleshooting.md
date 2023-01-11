@@ -4,24 +4,27 @@ description: >-
     Common issues and solutions users might run into while using PhyloNext.
 ---
 
+# Troubleshooting
+
 Common issues and solutions users might run into while using PhyloNext.
 
 !!! bug "Don't see your error/bug? Post an issue on GitHub"
     If you've encountered an error or bug not seen here, please post an issue at [PhyloNext GitHub Issues](https://github.com/vmikk/PhyloNext/issues). This will help greatly to track down the error and fix it!
 
-# Pipeline errors
+## Pipeline errors
 
-## Resume the workflow
+### Resume the workflow
 
 !!! failure "Pipeline was interrupted"
     Any accidental failure - e.g., you closed the terminal, rebooted your computer, or the task was killed by a scheduler on HPC.
 
-If the pipeline is interrupted, it can be resumed without having to start from scratch.
+If the pipeline is interrupted, it can be resumed without having to start from scratch.  
 Add the `-resume` flag to your command, and Nextflow will start the workflow from the last successfully executed process, 
 retrieving all previous results from the cache.
 
 
-## The number of available CPUs
+
+### The number of available CPUs
 
 !!! failure "Number of CPUs required"
     `Process requirement exceeds available CPUs -- req: 10; avail: 8`
@@ -42,7 +45,7 @@ to
 
 See the `Configuration` section in the [usage documentation](usage.md).
 
-## Pipeline revision version
+### Pipeline revision version
 
 !!! failure "Pipeline revision version"
     ```
@@ -53,9 +56,9 @@ Solution - specify a version number of the pipeline.
 To run the latest version, add `-r main` to your command.  
 Alternatively, you may specify the exact version (or tag) you wish, e.g. `-r v.0.0.2`.  
 
-# Installation problems
+## Installation problems
 
-## Nextflow not found
+### Nextflow not found
 
 !!! failure "Command not found"
     `command not found: nextflow`
@@ -81,7 +84,7 @@ echo "export PATH=$HOME/bin:$PATH" >> ~/.bashrc
     To know which shell are you using, run `echo $SHELL`
 
 
-## Docker permissions
+### Docker permissions
 
 !!! failure "Docker - permission denied"
     `docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.24/containers/create?name=nxf-Cz6yqNjGI9AhRpsqkU4mSAHC": dial unix /var/run/docker.sock: connect: permission denied.`
@@ -103,7 +106,7 @@ sudo usermod -aG docker ${USER}
 docker run hello-world
 ```
 
-## Docker and WSL2
+### Docker and WSL2
 
 !!! failure "Docker and WSL2"
     `The command 'docker' could not be found in this WSL 2 distro. We recommend to activate the WSL integration in Docker Desktop settings.`
@@ -115,7 +118,7 @@ Try to enable `Use the WSL2 based engine` in the `Docker Desktop` settings.
 </a>
 
 
-## PhyloNext containers
+### PhyloNext containers
 
 If for some reason Nextflow is not able to download containers for PhyloNext, 
 it's possible to pull them manually using:
