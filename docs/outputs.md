@@ -16,7 +16,7 @@ The leaflet-based map is located in `03.Plots/Choropleth.html`.
 
 As a small example (based on the Acacia dataset from Australia), a map will look like this:  
 
-<iframe src="assets/Leaflet_map.html" width="800" height="600"></iframe>
+<iframe src="https://phylonext.github.io/assets/Leaflet_map.html" width="800" height="600"></iframe>
 
 You may toggle selectors at the top-right corner to show the results for a particular diversity metric on the map. 
 In the example, there are three indices available:  
