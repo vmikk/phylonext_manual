@@ -12,7 +12,20 @@ Table `03.Plots/Biodiverse_results_merged.txt`
 
 ## Interactive map with diversity values
 
-Leaflet-based map `03.Plots/Choropleth.html`
+The leaflet-based map is located in `03.Plots/Choropleth.html`.  
+
+As a small example (based on the Acacia dataset from Australia), a map will look like this:  
+
+<iframe src="assets/Leaflet_map.html" width="800" height="600"></iframe>
+
+You may toggle selectors at the top-right corner to show the results for a particular diversity metric on the map. 
+In the example, there are three indices available:  
+
+- `RICHNESS_ALL`, observed species richness;  
+- `SES_PD`, the effect size for the phylogenetic diversity;  
+- `CANAPE`, centers of neo- and paleo-endemism (according to the CANAPE analysis; see [Mishler et al., 2020](https://onlinelibrary.wiley.com/doi/full/10.1111/jse.12590) for details).  
+
+Use the pipeline's `--leaflet var` parameter to specify which indices will be displayed on a map. 
 
 ## GeoPackage
 
