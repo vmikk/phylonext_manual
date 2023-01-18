@@ -51,16 +51,16 @@ In particular, the *Resources* section plots the distribution of resource usage 
 for each workflow process using the interactive [plotly.js](https://plot.ly/javascript/) plotting library. 
 The plots have several tabs with the raw values and a percentage representation showing what proportion of the requested resources were used. 
 These plots are very helpful in checking that task resources are used efficiently.
-![Workflow resource usage](assets/Report_ResourceUsage.png){ align=left }  
+![Workflow resource usage](assets/Report_ResourceUsage.webp){ align=left }  
 
 
 The *Tasks* section lists all executed tasks, reporting the status, the actual command script, and many other metrics for each of the tasks. 
 The same information is also stored in a tabular format in tab-delimited format (e.g., `execution_trace_*.txt`).
-![Workflow task stats](assets/Report_TaskStats.png){ align=left }  
+![Workflow task stats](assets/Report_TaskStats.webp){ align=left }  
 
 
 **Execution tracing file** contains helpful information about each process, including submission time, start time, completion time, CPU, and memory used.
-![Timelime of the pipeline](assets/Report_Timeline.png){ align=left }  
+![Timelime of the pipeline](assets/Report_Timeline.webp){ align=left }  
 
 
 !!! info "Resource usage metrics"

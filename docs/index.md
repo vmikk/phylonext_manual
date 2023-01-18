@@ -1,4 +1,4 @@
-# PhyloNext ![PhyloNext logo](/assets/PhyloNext_logo.png){: style="height:100px;width:125px" align=right}
+# PhyloNext ![PhyloNext logo](/assets/PhyloNext_logo.webp){: style="height:100px;width:125px" align=right}
 
 PhyloNext is an automated pipeline for the analysis of phylogenetic diversity using [GBIF occurrence data](https://www.gbif.org/occurrence/search?occurrence_status=present), species phylogenies from [Open Tree of Life](https://tree.opentreeoflife.org), and [Biodiverse software](https://shawnlaffan.github.io/biodiverse/).
 
@@ -23,8 +23,8 @@ The pipeline could be launched in a cloud environment (e.g., the [Microsoft Azur
 
 ## PhyloNext Workflow
 
-<a class="zoom" href="/assets/PhyloNext_Workflow.png">
-![PhyloNext Workflow](/assets/PhyloNext_Workflow.png)
+<a class="zoom" href="/assets/PhyloNext_Workflow.webp">
+![PhyloNext Workflow](/assets/PhyloNext_Workflow.webp)
 </a>
 
 ## Documentation Overview

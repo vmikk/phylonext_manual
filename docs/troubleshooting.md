@@ -113,8 +113,8 @@ docker run hello-world
 
 Try to enable `Use the WSL2 based engine` in the `Docker Desktop` settings.  
 
-<a class="zoom" href="/assets/DokerDesktop_WSL2.png">
-![WSL2 Docker Engine](/assets/DokerDesktop_WSL2.png)
+<a class="zoom" href="/assets/DokerDesktop_WSL2.webp">
+![WSL2 Docker Engine](/assets/DokerDesktop_WSL2.webp)
 </a>
 
 
