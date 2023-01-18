@@ -79,7 +79,7 @@ echo "export PATH=$HOME/bin:$PATH" >> ~/.bashrc
 ```
 
 !!! example "Notes on shells other than bash"
-    If you are using a shell other than `bash`, please .  
+    If you are using a shell other than `bash`, please modify configuration file specific for your shell.  
     E.g., for `zsh` it should be `~/.zshrc`.  
     To know which shell are you using, run `echo $SHELL`
 
