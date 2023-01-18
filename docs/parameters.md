@@ -117,13 +117,16 @@ For more details, see the blog post ["Outlier Detection Using DBSCAN"](https://d
 
 ## Occurrence filtering and binning
 
-| Parameter                | Description                                             | Type      | Example              | Default                           |
-| ------------------------ | ------------------------------------------------------- | --------- | -------------------- | --------------------------------- |
-| `--minyear`              | Minimum year of record's occurrences                    | `integer` | 2000                 | 1945                              |
-| `--basisofrecordinclude` | Round spatial coordinates to N decimal places ^1^       | `string`  | "PRESERVED_SPECIMEN" |                                   |
-| `--basisofrecordexclude` | Round spatial coordinates to N decimal places ^1^       | `string`  | "FOSSIL_SPECIMEN"    | "FOSSIL_SPECIMEN,LIVING_SPECIMEN" |
-| `--h3resolution`         | Spatial resolution of the H3 geospatial indexing system | `integer` | 4                    | 4                                 |
-| `--roundcoords`          | Round spatial coordinates to N decimal places ^2^       | `integer` | 2                    | 2                                 |
+| Parameter                   | Description                                             | Type      | Example              | Default                           |
+| --------------------------- | ------------------------------------------------------- | --------- | -------------------- | --------------------------------- |
+| `--minyear`                 | Minimum year of record's occurrences                    | `integer` | 2000                 | 1945                              |
+| `--coordprecision`          | Coordinate precision threshold, decimal degrees ^1^     | `number`  | 0.1                  | 0.1                               |
+| `--coorduncertainty`        | Maximum allowed coordinate uncertainty, meters ^1^      | `number`  | 10000                | 10000                             |
+| `--coorduncertaintyexclude` | Black list of coordinate uncertainty values ^1^         | `string`  | "9999"               | "301,3036,999,9999"               |
+| `--basisofrecordinclude`    | Round spatial coordinates to N decimal places ^2^       | `string`  | "PRESERVED_SPECIMEN" |                                   |
+| `--basisofrecordexclude`    | Round spatial coordinates to N decimal places ^2^       | `string`  | "FOSSIL_SPECIMEN"    | "FOSSIL_SPECIMEN,LIVING_SPECIMEN" |
+| `--h3resolution`            | Spatial resolution of the H3 geospatial indexing system | `integer` | 4                    | 4                                 |
+| `--roundcoords`             | Round spatial coordinates to N decimal places ^3^       | `integer` | 2                    | 2                                 |
 
 
 For spatial binning of species occurrences, PhyloNext uses H3 geospatial indexing system [developed by Uber](https://h3geo.org/docs). 
@@ -133,11 +136,19 @@ By default, PhyloNext uses resolution `4`, which corresponds to a hexagon with e
 More details on H3 resolutions could be found [here](https://h3geo.org/docs/core-library/restable/).  
 
 ^1^:
+    It's possible to remove occurrence records with a high level of coordinate uncertainty or low precision. 
+    It can be done using some threshold values. 
+    Also, there are several known default values for coordinate uncertainty in meters, which could be black-listed as well 
+    (e.g., these values may correspond to records linked to country centroids).  
+    NB! Records with missing values will not be removed, as many publishers do not fill these fields in the database.  
+    For details, see the blog post. ["Common things to look out for when post-processing GBIF downloads"](https://data-blog.gbif.org/post/gbif-filtering-guide/) by John Waller.
+
+^2^:
     For details, see description of a Darwin Core term [Basis of record](https://docs.gbif.org/course-data-use/en/basis-of-record.html) 
     and a short explanation [here](https://data-blog.gbif.org/post/living-specimen-to-preserved-specimen-understanding-basis-of-record/).  
     Multiple comma-separated values allowed.  
 
-^2^: 
+^3^: 
     As DBSCAN filtering is very computationally intensive, 
     it is possible to reduce dataset size (almost without loosing precision) by rounding record coordinates. 
     By default, coordinates are rounded to 2 decimal places, 
