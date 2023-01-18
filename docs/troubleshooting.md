@@ -43,7 +43,7 @@ to
     }
 ```
 
-See the `Configuration` section in the [usage documentation](usage.md).
+See the `Configuration` section in the [usage documentation](https://phylonext.github.io/usage/#configuration-file).
 
 ### Pipeline revision version
 
