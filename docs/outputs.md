@@ -40,6 +40,19 @@ See the example of opening GeoPackage in QGIS [in the post-processing section](p
     More information on the comparisons of different formats for storing geospatial data can be found here:  
     [http://switchfromshapefile.org/](http://switchfromshapefile.org/)
 
+## Dataset information
+
+The pipeline output contains two files with references to the original data sources, 
+which can be used for citing the data and giving proper credit to the original data providers 
+who collected and curated the data.  
+
+Species occurrences - `results/pipeline_info/Dataset_DOIs.txt`  
+Phylogenetic tree - `02.OTT_tree/citations.txt`  
+
+The `Dataset_DOIs.txt` file also contains Digital Object Identifiers (DOIs) for the datasets, 
+which can be used to create a derived dataset of species occurrences. 
+For more information, see the `Derived datasets` paragraph in [the post-processing section](post.md).
+
 ## Pipeline summary
 
 In the `results/pipeline_info` directory, there are pipeline execution reports created by Nextflow. 
