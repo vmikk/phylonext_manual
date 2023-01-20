@@ -16,7 +16,7 @@ The leaflet-based map is located in `03.Plots/Choropleth.html`.
 
 As a small example (based on the Acacia dataset from Australia), a map will look like this:  
 
- <iframe width=800, height=600 frameBorder=0 src="/assets/Leaflet_map.html"></iframe>
+ <iframe width=800, height=600 frameBorder=0 src="/assets/Leaflet_map_h3.html"></iframe>
 
 You may toggle selectors at the top-right corner to show the results for a particular diversity metric on the map. 
 In the example, there are three indices available:  
