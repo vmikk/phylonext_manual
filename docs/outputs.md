@@ -14,7 +14,7 @@ Table `03.Plots/Biodiverse_results_merged.txt`
 
 The leaflet-based map is located in `03.Plots/Choropleth.html`.  
 
-As a small example (based on the Acacia dataset from Australia), a map will look like this:  
+As a small example (based on the Acacia dataset from Australia, H3 resolution = 3), a map will look like this:  
 
  <iframe width=800, height=600 frameBorder=0 src="/assets/Leaflet_map_h3.html"></iframe>
 
