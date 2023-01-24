@@ -83,6 +83,45 @@ echo "export PATH=$HOME/bin:$PATH" >> ~/.bashrc
     E.g., for `zsh` it should be `~/.zshrc`.  
     To know which shell are you using, run `echo $SHELL`
 
+### GitHub API rate limits
+
+!!! failure "GitHub API rate limits"
+    ```
+    Checking vmikk/PhyloNext ...  
+    WARN: Cannot read project manifest -- Cause: API rate limit exceeded -- Provide your GitHub user name and password to get a higher rate limit  
+    API rate limit exceeded -- Provide your GitHub user name and password to get a higher rate limit
+    ```
+
+Without authentication, GitHub allows only a limited number of connections per hour (60 unauthenticated requests/hr). 
+Most likely, you've hit this problem because users from your organization (e.g., university) send too many requests to GitHub.  
+
+To overcome this limitation, you may generate a personal access token at [https://github.com/settings/tokens](https://github.com/settings/tokens)  
+Then, temporarily configure git to use your token with:
+``` bash
+username="YOUR_USERNAME"
+access_token="YOUR_TOKEN"
+git config --global url."https://${username}:${access_token}@github.com".insteadOf "https://github.com"
+```
+before running `nextflow pull vmikk/phylonext`.  
+
+Alternatively, you may wait for a while until the recovery of API limits. 
+Or, if you are using PhyloNext locally, you may change your IP address 
+(for example, connect your laptop to another wi-fi hotspot, e.g., to a smartphone hotspot) 
+and try to pull the pipeline once again. 
+You need to download the pipeline from GitHub only once. 
+Then, Nextflow will cache the pipeline code locally in the `~/.nextflow/assets/` directory 
+and will re-use it later without the need to connect to GitHub.  
+
+As another option, you may install GitHub client `gh` ([https://cli.github.com/](https://cli.github.com/)) 
+and run `gh auth login` to login and have a higher API rate limit.
+
+!!! example "Rate limit information"
+    To find the current rate limit information, run  
+    `curl -I https://api.github.com/users/octocat`
+
+!!! warning "Token security"
+    It is important to keep your token secure and not share it with others.  
+    Also make sure to revoke the token if it is compromised or no longer needed.
 
 ### Docker permissions
 
