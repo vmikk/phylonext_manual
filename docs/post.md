@@ -18,7 +18,7 @@ As one of the outputs, PhyloNext provides `03.Plots/Diversity_estimates.gpkg` fi
 which could be easily exported and visualized in your favorite GIS software.
 
 For example, you may use a free and open source application [`QGIS`](https://qgis.org/en/site/) to open a GeoPackage file.
-![GeoPackage and OSM in QGIS](assets/GeoPackage_QGIS.png){ align=left }
+![GeoPackage and OSM in QGIS](assets/GeoPackage_QGIS.webp){ align=left }
 
 ## Results exploration with Biodiverse program 
 
