@@ -100,6 +100,72 @@ Currently, Level-1 and Level-2 WGSRPD polygons are supported.
 ![WGRSP-L2](/assets/WGSRPD_L2.webp){ loading=lazy }  
 
 
+| Number | Polygon code                      |
+| ------ | --------------------------------- |
+| 1      | `L1_EUROPE`                       |
+| 2      | `L1_AFRICA`                       |
+| 3      | `L1_ASIA_TEMPERATE`               |
+| 4      | `L1_ASIA_TROPICAL`                |
+| 5      | `L1_AUSTRALASIA`                  |
+| 6      | `L1_PACIFIC`                      |
+| 7      | `L1_NORTHERN_AMERICA`             |
+| 8      | `L1_SOUTHERN_AMERICA`             |
+| 9      | `L1_ANTARCTIC`                    |
+| ------ | --------------------------------- |
+| 10     | `L2_Northern_Europe`              |
+| 11     | `L2_Middle_Europe`                |
+| 12     | `L2_Southwestern_Europe`          |
+| 13     | `L2_Southeastern_Europe`          |
+| 14     | `L2_Eastern_Europe`               |
+| 20     | `L2_Northern_Africa`              |
+| 21     | `L2_Macaronesia`                  |
+| 22     | `L2_West_Tropical_Africa`         |
+| 23     | `L2_West_Central_Tropical_Africa` |
+| 24     | `L2_Northeast_Tropical_Africa`    |
+| 25     | `L2_East_Tropical_Africa`         |
+| 26     | `L2_South_Tropical_Africa`        |
+| 27     | `L2_Southern_Africa`              |
+| 28     | `L2_Middle_Atlantic_Ocean`        |
+| 29     | `L2_Western_Indian_Ocean`         |
+| 30     | `L2_Siberia`                      |
+| 31     | `L2_Russian_Far_East`             |
+| 32     | `L2_Middle_Asia`                  |
+| 33     | `L2_Caucasus`                     |
+| 34     | `L2_Western_Asia`                 |
+| 35     | `L2_Arabian_Peninsula`            |
+| 36     | `L2_China`                        |
+| 37     | `L2_Mongolia`                     |
+| 38     | `L2_Eastern_Asia`                 |
+| 40     | `L2_Indian_Subcontinent`          |
+| 41     | `L2_Indo_China`                   |
+| 42     | `L2_Malesia`                      |
+| 43     | `L2_Papuasia`                     |
+| 50     | `L2_Australia`                    |
+| 51     | `L2_New_Zealand`                  |
+| 60     | `L2_Southwestern_Pacific`         |
+| 61     | `L2_South_Central_Pacific`        |
+| 62     | `L2_Northwestern_Pacific`         |
+| 63     | `L2_North_Central_Pacific`        |
+| 70     | `L2_Subarctic_America`            |
+| 71     | `L2_Western_Canada`               |
+| 72     | `L2_Eastern_Canada`               |
+| 73     | `L2_Northwestern_USA`             |
+| 74     | `L2_North_Central_USA`            |
+| 75     | `L2_Northeastern_USA`             |
+| 76     | `L2_Southwestern_USA`             |
+| 77     | `L2_South_Central_USA`            |
+| 78     | `L2_Southeastern_USA`             |
+| 79     | `L2_Mexico`                       |
+| 80     | `L2_Central_America`              |
+| 81     | `L2_Caribbean`                    |
+| 82     | `L2_Northern_South_America`       |
+| 83     | `L2_Western_South_America`        |
+| 84     | `L2_Brazil`                       |
+| 85     | `L2_Southern_South_America`       |
+| 90     | `L2_Subantarctic_Islands`         |
+| 91     | `L2_Antarctic_Continent`          |
+
+
 !!! info "Custom polygons"
     It is possible to use custom polygons instead of WGSRPD file. 
     Polygons should be in the simple feature collection format (class `sf` of the [`sf` package](https://r-spatial.github.io/sf/), 
