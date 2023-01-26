@@ -87,7 +87,18 @@ Spatial filters.
     PhyloNext ships [WGSRPD](https://www.tdwg.org/standards/wgsrpd/) shapefile as a built-in data.
     To use it, specify a full path to the data (e.g., `$(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/WGSRPD.RData")`)
 
-^4^: Multiple comma-separated values allowed 
+^4^:
+    Multiple comma-separated values allowed.  
+
+Currently, Level-1 and Level-2 WGSRPD polygons are supported.  
+
+**Level-1** polygons (continental level):
+![WGRSP-L1](/assets/WGSRPD_L1.webp){ loading=lazy }  
+
+
+**Level-2** polygons (regional or subcontinental level):
+![WGRSP-L2](/assets/WGSRPD_L2.webp){ loading=lazy }  
+
 
 !!! info "Custom polygons"
     It is possible to use custom polygons instead of WGSRPD file. 
