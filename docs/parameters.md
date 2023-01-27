@@ -290,7 +290,8 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 | `--leaflet_color`      | Color scheme for continuous variables  ^2^                                    | `string`  | "RdYlBu"    | "RdYlBu"                                                                             |
 | `--leaflet_palette`    | Color palette for continuous variables ^3^                                    | `string`  | "quantile"  | "quantile"                                                                           |
 | `--leaflet_bins`       | Number of color bins for continuous variables                                 | `integer` | 5           | 5                                                                                    |
-| `--leaflet_redundancy` | Redundancy threshold for hiding the grid cells with low number of records ^4^ | `number`  | 85          | 0                                                                                    |
+| `--leaflet_sescolor`   | Color scheme for standardized effect sizes, SES ^4^                           | `string`  | "hotspots"  | "threat"                                                                             |
+| `--leaflet_redundancy` | Redundancy threshold for hiding the grid cells with low number of records ^5^ | `number`  | 85          | 0                                                                                    |
 
 ^1^:
     For a list of indices available in Biodiverse, see [here](https://github.com/shawnlaffan/biodiverse/wiki/IndicesDevVersion).  
