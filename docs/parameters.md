@@ -312,6 +312,13 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
    - `colorQuantile` similarly bins numeric data, but via the quantile function
 
 ^4^:
+    The default color scheme (`threat`-type) for SES values follows Mishler et al., 2014, 
+    where high SES values are in blue, and low SES values are in red.  
+    Alternatively, it is possible to use the `hotspot`-type palette, 
+    where areas with the red values indicate grid cells that contain significantly higher diversity or endemism than expected (hotspots), 
+    while the blue values indicate grid cells that contain significantly lower diversity/endemism than expected (coldspots).  
+
+^5^:
     Sampling redundancy is defined as [1 – (richness / number of specimens)] in a grid cell. 
     By default, parameter `--leaflet_redundancy` is set to 0, which will display all grid cells.
 
