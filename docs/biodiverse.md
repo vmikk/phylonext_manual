@@ -67,7 +67,8 @@ To visualize these metrics, user may add `SES_` prefix to the index name (e.g., 
 
 !!! info "Standardized effect sizes"
     For more information about standardized effect sizes, see:  
-    Webb CO, Ackerly DA, Kembel SW. Phylocom: software for the analysis of phylogenetic community structure and trait evolution, Bioinformatics, V. 24 (18), P. 2098–2100. [DOI:10.1093/bioinformatics/btn358](https://academic.oup.com/bioinformatics/article/24/18/2098/190910)
+    Webb CO, Ackerly DD, McPeek MA, Donoghue MJ (2002). Phylogenies and Community Ecology. Annual Review of Ecology and Systematics, 33(1), 475–505. [DOI:10.1146/annurev.ecolsys.33.010802.150448](https://www.annualreviews.org/doi/abs/10.1146/annurev.ecolsys.33.010802.150448)
+
 
 
 ## Special indices
