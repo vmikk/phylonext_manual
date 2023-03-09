@@ -274,7 +274,7 @@ Therefore, parameter values should correspond to the Biodiverse values.
 | `--indices`           | Diversity and endemism indices to estimate ^1^                                  | `string`  | "calc_richness,calc_pd,calc_pe" | "calc_richness,calc_simpson_shannon,calc_endemism_whole,calc_pd,calc_pe,calc_phylo_corrected_weighted_endemism,calc_phylo_rpd1,calc_phylo_rpd2,calc_phylo_rpe1,calc_phylo_rpe2"  |
 | `--iterations`        | Number of randomisation iterations for standardized effect size estimation      | `integer` | 1000                            | 1000                                                                                                                                      |
 | `--biodiversethreads` | Number of Biodiverse threads                                                    | `integer` | 10                              | 10                                                                                                                                        |
-| `--randname`          | Randomisation scheme type                                                       | `string`  | "rand_structured"               | "rand_structured"                                                                                                                         |
+| `--randname`          | Randomisation scheme type ^2^                                                   | `string`  | "rand_structured"               | "rand_structured"                                                                                                                         |
 | `--randconstrain`     | Polygons to perform spatially constrained randomization (GeoPackage format) ^2^ | `file`    | "ZoogeographicRegions.gpkg"     |                                                                                                                                           |
 
 ^1^: 
@@ -282,6 +282,21 @@ Therefore, parameter values should correspond to the Biodiverse values.
     For details see [Biodiverse manual](https://github.com/shawnlaffan/biodiverse/wiki/Indices).  
     The most common indices are listed here: [`Diversity indices`](biodiverse.md).  
 
+^2^:
+    In order to estimate standardized effect sizes (SES) of different diversity metrics and 
+    determine whether the obtained estimates are more extreme than what might be predicted given a null model, 
+    Biodiverse requires to perform randomization. 
+    By default, Biodiverse uses the `rand_structured` randomization algorithm, 
+    which shuffles species occurrences randomly across the entire area while preserving the 
+    species richness of each sample or grid cell. This method works well for most studies and is very effective. 
+    However, in cases where the analysis is conducted on a large scale and involves samples from different biomes or continents, 
+    the total pool of species may span multiple environments. As a result, randomizations may allocate 
+    a polar taxon to the tropics, or a desert taxon to a rainforest. One way to address this issue is 
+    by performing randomizations within a subset of data based on a spatial condition, such as biomes or zoogeographic regions. 
+    PhyloNext allows the user to specify such conditions as a GeoPackage file with multiple polygons. 
+    This feature enables users to keep any species within the biome in which they are found while still randomly relocating them. 
+    Hence, the randomization process can be tailored to suit the specific needs of the study 
+    and ensure that the results accurately reflect the distribution of species in the area of interest.
 ## Visualization - interactive
 
 Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
