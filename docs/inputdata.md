@@ -118,6 +118,15 @@ Please replace `creator` and `notification_address` with your own.
 
 Note the usage of `HAS_GEOSPATIAL_ISSUE`, which is a shortcut for the following issues: 
 `ZERO_COORDINATE`, `COORDINATE_INVALID`, `COORDINATE_OUT_OF_RANGE`, and `COUNTRY_COORDINATE_MISMATCH`.  
+
+!!! note "Geospatial filters & issues"
+    To read more about different Geospatial issues, see  
+    [https://docs.gbif.org/course-data-use/en/geospatial-filters-issues.html](https://docs.gbif.org/course-data-use/en/geospatial-filters-issues.html)
+
+
+If you would like to specify taxonomic or spatial scopes, 
+you may add additional **predicates** (query expressions to retrieve occurrence record downloads), e.g.:  
+
 ``` json
    {
     "type": "equals",
