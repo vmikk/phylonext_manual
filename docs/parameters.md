@@ -73,15 +73,16 @@ Spatial filters.
 | `--latmax`  | Maximum latitude of species occurrences ^1^  | `number` | 15.5                          |         |
 | `--lonmin`  | Minimum longitude of species occurrences ^1^ | `number` | 47.0                          |         |
 | `--lonmax`  | Maximum longitude of species occurrences ^1^ | `number` | 55.5                          |         |
-| `--country` | Country code, ISO 3166 ^2^                   | `string` | "DE,PL,CZ"                    |         |
+| `--country` | Country code, ISO 3166 format ^2^            | `string` | "DE,PL,CZ"                    |         |
 | `--wgsrpd`  | Polygons of World Geographical Regions ^3^   | `file`   |                               |         |
 | `--regions` | Names of World Geographical Regions ^4^      | `string` | "L1_EUROPE,L1_ASIA_TEMPERATE" |         |
 
 ^1^: Coordinates should be provided in decimal degrees
 
 ^2^:
-    Country codes should be provided in ISO 3166 format (two-letter codes), 
-    see details [here](https://www.iso.org/obp/ui/#search) (column `Alpha-2` code).
+    Country codes should be provided in the two-letter `ISO 3166-1 alpha-2` coding system,  
+    see details [here](https://www.iso.org/obp/ui/#search) (column `Alpha-2` code),  
+    and [this Wikipedia article](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
 
 ^3^:
     PhyloNext ships [WGSRPD](https://www.tdwg.org/standards/wgsrpd/) shapefile as a built-in data.
