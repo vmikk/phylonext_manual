@@ -35,7 +35,7 @@ nextflow run vmikk/phylonext -r main \
 This will launch the pipeline with the `docker` configuration profile (see below for more information about profiles).
 
 !!! info "Parameters"
-    All parameters are listed in the (`Parameters`)[parameters.md] section of the documentation.  
+    All parameters are listed in the [`Parameters`](parameters.md) section of the documentation.  
 
 Note that the pipeline will create the following files in your working directory:  
 
