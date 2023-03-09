@@ -298,6 +298,12 @@ Therefore, parameter values should correspond to the Biodiverse values.
     Hence, the randomization process can be tailored to suit the specific needs of the study 
     and ensure that the results accurately reflect the distribution of species in the area of interest.
 
+!!! info "Randomization algorithms in Biodiverse"
+    See a series of blog posts by Shawn Laffan:  
+    1. [Better control of randomisations](https://biodiverse-analysis-software.blogspot.com/2015/06/better-control-of-randomisations.html)  
+    2. [How the `rand_structured` algorithm works](https://biodiverse-analysis-software.blogspot.com/2020/11/randomisations-how-randstructured.html)  
+    3. [Spatially partition your randomisations](https://biodiverse-analysis-software.blogspot.com/2020/11/spatially-partition-your-randomisations.html)  
+
 To illustrate how spatially-constrained randomizations can be executed for Mammals on a global scale, 
 one can utilize the zoogeographical regions established by [Shen et al., 2022, DOI:10.4236/oje.2022.123014](https://www.scirp.org/journal/paperinformation.aspx?paperid=116248). 
 These regions are conveniently available in the `pipeline_data/ZoogeographicRegions.gpkg` file, 
