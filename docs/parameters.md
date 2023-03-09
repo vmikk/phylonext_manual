@@ -278,7 +278,7 @@ Therefore, parameter values should correspond to the Biodiverse values.
 | `--randconstrain`     | Polygons to perform spatially constrained randomization (GeoPackage format) ^2^ | `file`    | "ZoogeographicRegions.gpkg"     |                                                                                                                                           |
 
 ^1^: 
-    Comma-separated list of metrics. More than 350 indices are supported. 
+    Comma-separated list of metrics. More than 350 indices are supported.  
     For details see [Biodiverse manual](https://github.com/shawnlaffan/biodiverse/wiki/Indices).  
     The most common indices are listed here: [`Diversity indices`](biodiverse.md).  
 
@@ -305,9 +305,10 @@ Therefore, parameter values should correspond to the Biodiverse values.
     3. [Spatially partition your randomisations](https://biodiverse-analysis-software.blogspot.com/2020/11/spatially-partition-your-randomisations.html)  
 
 To illustrate how spatially-constrained randomizations can be executed for Mammals on a global scale, 
-one can utilize the zoogeographical regions established by [Shen et al., 2022, DOI:10.4236/oje.2022.123014](https://www.scirp.org/journal/paperinformation.aspx?paperid=116248). 
+one can utilize the zoogeographical regions established by [Shen et al., 2022, DOI:10.4236/oje.2022.123014](https://www.scirp.org/journal/paperinformation.aspx?paperid=116248).  
 These regions are conveniently available in the `pipeline_data/ZoogeographicRegions.gpkg` file, 
-which is included in PhyloNext. The file comprises seven biogeographical kingdoms:  
+which is included in PhyloNext.  
+The file comprises seven biogeographical kingdoms:  
 - West Palaearctic kingdom  
 - East Palaearctic kingdom  
 - Indo-Pacific kingdom  
