@@ -17,7 +17,7 @@ theme:
         icon: material/brightness-4
         name: Switch to dark mode
     - scheme: slate
-      primary: red
+      primary: brown
       accent: red
       toggle:
         icon: material/brightness-7
