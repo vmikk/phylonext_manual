@@ -297,6 +297,23 @@ Therefore, parameter values should correspond to the Biodiverse values.
     This feature enables users to keep any species within the biome in which they are found while still randomly relocating them. 
     Hence, the randomization process can be tailored to suit the specific needs of the study 
     and ensure that the results accurately reflect the distribution of species in the area of interest.
+
+To illustrate how spatially-constrained randomizations can be executed for Mammals on a global scale, 
+one can utilize the zoogeographical regions established by [Shen et al., 2022, DOI:10.4236/oje.2022.123014](https://www.scirp.org/journal/paperinformation.aspx?paperid=116248). 
+These regions are conveniently available in the `pipeline_data/ZoogeographicRegions.gpkg` file, 
+which is included in PhyloNext. The file comprises seven biogeographical kingdoms:  
+- West Palaearctic kingdom  
+- East Palaearctic kingdom  
+- Indo-Pacific kingdom  
+- Afrotropical kingdom  
+- Australian kingdom  
+- Nearctic kingdom  
+- Neotropical kingdom  
+
+![ZooGeographical_Regions](/assets/Shen_ZooGeographical_Regions_2022.webp){ loading=lazy }  
+(original data source - [https://www.scirp.org/journal/paperinformation.aspx?paperid=116248](https://www.scirp.org/journal/paperinformation.aspx?paperid=116248))
+
+
 ## Visualization - interactive
 
 Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
