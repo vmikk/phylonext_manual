@@ -49,10 +49,15 @@ If you would like to remove records with geospatial issues from the data, please
 
 ## Subsetting occurrence data via GBIF API
 
-Working with a subset of occurrences could increase the processing speed of the pipeline.
-It is possible to obtain a subset of species occurrence from GBIF programmatically. For this purpose, one may use an application programming interface (API) provided by GBIF. API is a set of rules and protocols that allow different software programs to communicate with each other. Therefore, APIs enable developers to access the data and functionality of a website or web-based service in a controlled, programmatic way.
+Working with a subset of occurrences could increase the processing speed of the pipeline. 
+It is possible to obtain a subset of species occurrence from GBIF programmatically. 
+For this purpose, one may use an application programming interface (API) provided by GBIF. 
+API is a set of rules and protocols that allow different software programs to communicate with each other. 
+Therefore, APIs enable developers to access the data and functionality of a website or web-based service in a controlled, programmatic way.  
 
-First, you must specify a set of filters that should be applied to the data. For this purpose, create a simple text file in JSON format (see the example below). Please replace `creator` and `notification_address` with your own.
+First, you must specify a set of filters that should be applied to the data. 
+For this purpose, create a simple text file in JSON format (see the example below). 
+Please replace `creator` and `notification_address` with your own.  
 
 ``` json
 {
