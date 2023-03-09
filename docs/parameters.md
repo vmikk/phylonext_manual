@@ -280,7 +280,7 @@ Therefore, parameter values should correspond to the Biodiverse values.
 ^1^: 
     Comma-separated list of metrics. More than 350 indices are supported. 
     For details see [Biodiverse manual](https://github.com/shawnlaffan/biodiverse/wiki/Indices).  
-    The most common indices are listed here: (`Diversity indices`)[biodiverse.md].  
+    The most common indices are listed here: [`Diversity indices`](biodiverse.md).  
 
 ## Visualization - interactive
 
