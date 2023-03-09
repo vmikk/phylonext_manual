@@ -116,7 +116,8 @@ Please replace `creator` and `notification_address` with your own.
 }
 ```
 
-If you would like to specify taxonomic or spatial scopes, you may add additional **predicates** (query expressions to retrieve occurrence record downloads), e.g.:
+Note the usage of `HAS_GEOSPATIAL_ISSUE`, which is a shortcut for the following issues: 
+`ZERO_COORDINATE`, `COORDINATE_INVALID`, `COORDINATE_OUT_OF_RANGE`, and `COUNTRY_COORDINATE_MISMATCH`.  
 ``` json
    {
     "type": "equals",
