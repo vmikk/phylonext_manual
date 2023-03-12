@@ -49,3 +49,15 @@ Cheng J, Karambelkar B, Xie Y (2022) `leaflet`: Create interactive web maps with
 
 ## Datasets
 
+**World base map and polygons of land and urban areas**:  
+[Natural Earth](https://www.naturalearthdata.com/)  
+
+**WGSRPD (World Geographic Scheme for Recording Plant Distributions)**:  
+Brummitt RK, Pando F, Hollis S, Brummitt NA (2001) World Geographic Scheme for Recording Plant Distributions. [http://rs.tdwg.org/wgsrpd/doc/data/](http://rs.tdwg.org/wgsrpd/doc/data/)
+
+**Bio-geographical regions for terrestrial animals**:  
+Shen Q, Lu J, Zhang S, You Z, Ren Y, Shen X (2022) The Bio-Geographical Regions Division of Global Terrestrial Animal by Multivariate Similarity Clustering Analysis Method. Open Journal of Ecology, 12(3), Article 3. [DOI:10.4236/oje.2022.123014](https://www.scirp.org/journal/paperinformation.aspx?paperid=116248)
+
+**CoordinateCleaner**-based datasets for removal of common geospatial errors:  
+Zizka A, Silvestro D, Andermann T, Azevedo J, Duarte Ritter C, Edler D, Farooq H, Herdean A, Ariza M, Scharn R, Svantesson S, Wengström N, Zizka V, Antonelli A (2019) `CoordinateCleaner`: Standardized cleaning of occurrence records from biological collection databases. Methods in Ecology and Evolution, 10(5), 744–751. [DOI:10.1111/2041-210X.13152](https://besjournals.onlinelibrary.wiley.com/doi/10.1111/2041-210X.13152)  
+
