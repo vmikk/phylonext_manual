@@ -56,8 +56,11 @@ Web-based graphical user interface for PhyloNext.
 [Post processing](post.md)  
 Post processing output files.
 
+[Use case examples](usecases.md)  
+A few use cases analysed by PhyloNext.  
+
 [Acknowledgments](acknowledgements.md)  
-Acknowledgments and a list of software packages used by PhyloNext.
+Acknowledgments and a list of software packages used by PhyloNext.  
 
 ## Contributions and Support
 
