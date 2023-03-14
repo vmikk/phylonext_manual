@@ -61,5 +61,6 @@ nav:
   - 'Troubleshooting':      'troubleshooting.md'
   - 'Web GUI':              'webgui.md'
   - 'Post processing':      'post.md'
+  - 'Use cases':            'usecases.md'
   - 'Acknowledgments':      'acknowledgements.md'
-  - 'Citations':             'citations.md'
+  - 'Citations':            'citations.md'
