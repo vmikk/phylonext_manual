@@ -321,6 +321,11 @@ The file comprises seven biogeographical kingdoms:
 ![ZooGeographical_Regions](/assets/Shen_ZooGeographical_Regions_2022.webp){ loading=lazy }  
 (original data source - [https://www.scirp.org/journal/paperinformation.aspx?paperid=116248](https://www.scirp.org/journal/paperinformation.aspx?paperid=116248))
 
+To activate spatially-constrained randomizations using these biogeographic regions, add the following argument to your command:  
+``` bash
+--randconstrain `$(realpath "${HOME}/.nextflow/assets/vmikk/phylonext/pipeline_data/ZoogeographicRegions.gpkg")`
+```
+
 
 ## Visualization - interactive
 
