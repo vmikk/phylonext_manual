@@ -67,15 +67,16 @@ Unfortunately, `class` is a reserved keyword in Nextflow. Therefore, Latin `clas
 
 Spatial filters.
 
-| Parameter   | Description                                  | Type     | Example                       | Default |
-| ----------- | -------------------------------------------- | -------- | ----------------------------- | ------- |
-| `--latmin`  | Minimum latitude of species occurrences ^1^  | `number` | 5.1                           |         |
-| `--latmax`  | Maximum latitude of species occurrences ^1^  | `number` | 15.5                          |         |
-| `--lonmin`  | Minimum longitude of species occurrences ^1^ | `number` | 47.0                          |         |
-| `--lonmax`  | Maximum longitude of species occurrences ^1^ | `number` | 55.5                          |         |
-| `--country` | Country code, ISO 3166 format ^2^            | `string` | "DE,PL,CZ"                    |         |
-| `--wgsrpd`  | Polygons of World Geographical Regions ^3^   | `file`   |                               |         |
-| `--regions` | Names of World Geographical Regions ^4^      | `string` | "L1_EUROPE,L1_ASIA_TEMPERATE" |         |
+| Parameter   | Description                                                         | Type     | Example                       | Default |
+| ----------- | ------------------------------------------------------------------- | -------- | ----------------------------- | ------- |
+| `--latmin`  | Minimum latitude of species occurrences ^1^                         | `number` | 5.1                           |         |
+| `--latmax`  | Maximum latitude of species occurrences ^1^                         | `number` | 15.5                          |         |
+| `--lonmin`  | Minimum longitude of species occurrences ^1^                        | `number` | 47.0                          |         |
+| `--lonmax`  | Maximum longitude of species occurrences ^1^                        | `number` | 55.5                          |         |
+| `--country` | Country code, ISO 3166 format ^2^                                   | `string` | "DE,PL,CZ"                    |         |
+| `--polygon` | Custom area of interest (a file with polygons in GeoPackage format) | `file`   | `Brazil_ThreeStates.gpkg`     |         |
+| `--wgsrpd`  | Polygons of World Geographical Regions ^3^                          | `file`   | `pipeline_data/WGSRPD.RData`  |         |
+| `--regions` | Names of World Geographical Regions ^4^                             | `string` | "L1_EUROPE,L1_ASIA_TEMPERATE" |         |
 
 ^1^: Coordinates should be provided in decimal degrees
 
