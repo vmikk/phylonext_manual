@@ -276,7 +276,7 @@ Therefore, parameter values should correspond to the Biodiverse values.
 | `--iterations`        | Number of randomisation iterations for standardized effect size estimation      | `integer` | 1000                            | 1000                                                                                                                                      |
 | `--biodiversethreads` | Number of Biodiverse threads                                                    | `integer` | 10                              | 10                                                                                                                                        |
 | `--randname`          | Randomisation scheme type ^2^                                                   | `string`  | "rand_structured"               | "rand_structured"                                                                                                                         |
-| `--randconstrain`     | Polygons to perform spatially constrained randomization (GeoPackage format) ^2^ | `file`    | "ZoogeographicRegions.gpkg"     |                                                                                                                                           |
+| `--randconstrain`     | Polygons to perform spatially constrained randomization (GeoPackage format) ^2^ | `file`    | `ZoogeographicRegions.gpkg`     |                                                                                                                                           |
 
 ^1^: 
     Comma-separated list of metrics. More than 350 indices are supported.  
