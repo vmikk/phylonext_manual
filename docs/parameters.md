@@ -370,6 +370,13 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     Sampling redundancy is defined as [1 – (richness / number of specimens)] in a grid cell. 
     By default, parameter `--leaflet_redundancy` is set to 0, which will display all grid cells.
 
+^6^:
+    In contrast with the original publication by Mishler et al. (2020), 
+    the current version of Biodivere (v.4.1) classifies endemism into 3 categories 
+    (super-endemism type is merged with mixed endemism, 
+    see [https://biodiverse-analysis-software.blogspot.com/2022/10/biodiverse-now-calculates-canape-for-you.html](https://biodiverse-analysis-software.blogspot.com/2022/10/biodiverse-now-calculates-canape-for-you.html)). 
+    In PhyloNext, it is possible to use both coloring schemes (with and without super-endemism).  
+
 !!! info "CANAPE"
     CANAPE (Categorical Analysis of Palaeo and Neo Endemism) 
     is able to distinguish different types of centres of endemism, and can thus give insights 
