@@ -515,8 +515,8 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 | `-w`           | Path to the working directory to store intermediate results                                                  | `string`  | "$(pwd)/wd"    | "work"                   |
 | `-resume`      | Execute the pipeline using the cached results.<br>Useful to continue executions that was stopped by an error |           |                |                          |
 | `-profile`     | Configuration profiles (set of configuration attributes) ^1^                                                 | `string`  | test,docker    |                          |
-| `-params-file` | Parameter file in YAML or JSON format ^1^                                                                    | `file`    | "Mammals.yaml" |                          |
-| `-c`           | Configuration file ^1^                                                                                       | `file`    |                | "nextflow.config"        |
+| `-params-file` | Parameter file in YAML or JSON format ^1^                                                                    | `file`    | `Mammals.yaml` |                          |
+| `-c`           | Configuration file ^1^                                                                                       | `file`    |                | `nextflow.config`        |
 
 ^1^:
     For examples, see the `Configuration and profiles` and `Parameter file` sections in the [Usage](usage.md) documentation.
