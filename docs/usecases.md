@@ -4,9 +4,11 @@ description: >-
     A few use cases analysed by PhyloNext.
 ---
 
+# Use cases
+
 Here, we will showcase several maps generated using the PhyloNext pipeline for different use cases.  
 
-# Phylogenetic diversity of terrestrial Mammals based on the IUCN datasets
+## Phylogenetic diversity of terrestrial Mammals based on the IUCN datasets
 
 **Phylogenetic diversity**  
 ![Global_PD](/assets/IUCN_PD.webp){ loading=lazy }  
