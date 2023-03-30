@@ -353,6 +353,25 @@ sudo singularity build Biodiverse.sif SingularityDef_NoPerlbrew.def
 ```
 
 
+## System requirements
+
+When running the pipeline, it's important to consider the system requirements and time elapsed to complete the analysis.  
+
+For example, for the global analysis of Mammal diversity at H3 resolution = 3 
+(4710 species and 9814 grid cells in total),
+and using 5000 spatially-uncontrained randomizations, with DBSCAN removal of outliers, 
+the total CPU hours required was 113.6 hours (using 50 CPUs, the wall time was 4 hours). 
+The peak memory usage during the analysis was 62GB for a DBSCAN filtering of occurrences of a very abundant species. 
+This analysis is computationally intensive and requires a powerful computer with at least 64GB of RAM.
+
+In contrast, the same analysis with a basis of record restricted to `PRESERVED_SPECIMEN` 
+(4333 species and 7182 grid cells) 
+required 30.4 CPU hours and a wall time of 1 hour and 13 minutes. 
+The maximum memory usage was 9GB for an interactive map generation.
+
+For a smaller-scale analysis, usually a less powerful computer with at least 16GB of RAM should be sufficient.
+
+
 ## Running on HPC
 
 If you would like to run PhyloNext on HPC cluster, Nextflow can handle job submissions and supervise the running jobs. 
