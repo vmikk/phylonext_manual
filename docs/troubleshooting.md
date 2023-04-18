@@ -95,14 +95,9 @@ echo "export PATH=$HOME/bin:$PATH" >> ~/.bashrc
 Without authentication, GitHub allows only a limited number of connections per hour (60 unauthenticated requests/hr). 
 Most likely, you've hit this problem because users from your organization (e.g., university) send too many requests to GitHub.  
 
-To overcome this limitation, you may generate a personal access token at [https://github.com/settings/tokens](https://github.com/settings/tokens)  
-Then, temporarily configure git to use your token with:
-``` bash
-username="YOUR_USERNAME"
-access_token="YOUR_TOKEN"
-git config --global url."https://${username}:${access_token}@github.com".insteadOf "https://github.com"
-```
-before running `nextflow pull vmikk/phylonext`.  
+To overcome this limitation, you may generate a personal access token at [https://github.com/settings/tokens](https://github.com/settings/tokens) (the minimum required scopes are `repo`, `read:org`, and `workflow`).  
+To authenticate, you may use the GitHub client `gh` ([https://cli.github.com/](https://cli.github.com/)).  
+Run `gh auth login --with-token <YOURTOKEN>` to login. This way you will have a higher API rate limit.  
 
 Alternatively, you may wait for a while until the recovery of API limits. 
 Or, if you are using PhyloNext locally, you may change your IP address 
@@ -112,11 +107,15 @@ You need to download the pipeline from GitHub only once.
 Then, Nextflow will cache the pipeline code locally in the `~/.nextflow/assets/` directory 
 and will re-use it later without the need to connect to GitHub.  
 
-As another option, you may install GitHub client `gh` ([https://cli.github.com/](https://cli.github.com/)) 
-and run `gh auth login` to login and have a higher API rate limit.
+As another option, you may just manually clone the git repository into Nextlow assets directory:  
+``` bash
+mkdir -p ~/.nextflow/assets/vmikk/
+cd ~/.nextflow/assets/vmikk/
+git clone https://github.com/vmikk/PhyloNext
+```
 
 !!! example "Rate limit information"
-    To find the current rate limit information, run  
+    To find the current rate limit information (for unauthenticated requests), run  
     `curl -I https://api.github.com/users/octocat`
 
 !!! warning "Token security"
