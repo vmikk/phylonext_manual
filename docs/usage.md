@@ -277,12 +277,12 @@ When executing PhyloNext on your data, it is a good idea to specify a version nu
 This ensures that specific code revision and software dependencies are used. 
 Even if the codebase has changed, if you continue using the same tag, you will run the same pipeline version.  
 To find the latest version number, go to the [PhyloNext releases page](https://github.com/vmikk/PhyloNext/releases). 
-Then, when launching the pipeline, specify the version using `-r` flag (e.g., `-r v1.0`).
+Then, when launching the pipeline, specify the version using `-r` flag (e.g., `-r v.1.0.0`).
 This version number will be recorded in pipeline reports so you can later go back and know what version you used.  
 
-Run the tagged version (e.g., v1.0) of the pipeline:
+Run the tagged version (e.g., v.1.3.0) of the pipeline:
 ``` bash
-nextflow run vmikk/phylonext -r v1.0 ...
+nextflow run vmikk/phylonext -r v.1.3.0 ...
 ```
 
 Print the pipeline and system runtime information:
