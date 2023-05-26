@@ -308,9 +308,9 @@ PhyloNext currently relies on three containers and refers to them using process 
 
 | Process Label          | Default Docker container | Docker file                                                                             | Default Singularity container           | Singularity definition file                                                                  |
 | ---------------------- | ------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------- |
-| `container_r`          | `vmikk/rarrow:1.0.0`     | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/R_arrow.dockerfile)  | `library://vmiks/gbif/rarrow:1-0-0`     | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/R_arrow_Singularity.def)  |
-| `container_biodiverse` | `vmikk/biodiverse:1.0.0` | [Link](https://github.com/vmikk/biodiverse-docker/blob/main/Dockerfile_NoPerlbrew)      | `library://vmiks/gbif/biodiverse:1-0-0` | [Link](https://github.com/vmikk/biodiverse-docker/blob/main/SingularityDef_NoPerlbrew.def)   |
-| `container_ott`        | `vmikk/opentree:0.0.2`   | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/OpenTree.dockerfile) | `library://vmiks/gbif/opentree:1-0-0`   | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/OpenTree_Singularity.def) |
+| `container_r`          | `vmikk/rarrow:1.3.0`     | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/R_arrow.dockerfile)  | `library://vmiks/gbif/rarrow:1-3-0`     | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/R_arrow_Singularity.def)  |
+| `container_biodiverse` | `vmikk/biodiverse:1.3.0` | [Link](https://github.com/vmikk/biodiverse-docker/blob/main/Dockerfile_NoPerlbrew)      | `library://vmiks/gbif/biodiverse:1-3-0` | [Link](https://github.com/vmikk/biodiverse-docker/blob/main/SingularityDef_NoPerlbrew.def)   |
+| `container_ott`        | `vmikk/opentree:0.0.2`   | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/OpenTree.dockerfile) | `library://vmiks/gbif/opentree:0-0-2`   | [Link](https://github.com/vmikk/PhyloNext/blob/main/containerfiles/OpenTree_Singularity.def) |
 
 The configuration file has the following format and must be adjusted if you would like to use custom containers:  
 
@@ -318,11 +318,11 @@ The configuration file has the following format and must be adjusted if you woul
 process {
 
     withLabel: 'container_r' {
-        container = 'vmikk/rarrow:1.0.0'
+        container = 'vmikk/rarrow:1.3.0'
     }
 
     withLabel: 'container_biodiverse' {
-        container = 'vmikk/biodiverse:1.0.0'
+        container = 'vmikk/biodiverse:1.3.0'
     }
 
     withLabel: 'container_ott' {
