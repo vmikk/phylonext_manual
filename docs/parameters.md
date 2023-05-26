@@ -499,6 +499,7 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
 | Parameter          | Description                                                                | Type      | Default |
 | ------------------ | -------------------------------------------------------------------------- | --------- | ------- |
 | `--deriveddataset` | Export list of GBIF dataset keys for the filtered species occurrences ^1^  | `boolean` | True    |
+| `--help`           | Display help text (pipeline)                                               | `boolean` |         |
 | `--helpMsg`        | Display help text (pipeline)                                               | `boolean` |         |
 
 ^1^: Could be used for citation and preparing a derived dataset with unique DOI.
