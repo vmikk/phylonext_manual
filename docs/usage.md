@@ -169,7 +169,7 @@ The total number of CPUs allowed to use by PhyloNext can be adjusted with `-qs` 
 
 To show a help message, run:
 ``` bash
-nextflow run vmikk/phylonext -r main --helpMsg
+nextflow run vmikk/phylonext -r main --help
 ```
 
 ## Configuration and profiles
