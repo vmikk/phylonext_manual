@@ -199,6 +199,7 @@ For more details, see the blog post ["Outlier Detection Using DBSCAN"](https://d
 | Parameter                   | Description                                             | Type      | Example              | Default                           |
 | --------------------------- | ------------------------------------------------------- | --------- | -------------------- | --------------------------------- |
 | `--minyear`                 | Minimum year of record's occurrences                    | `integer` | 2000                 | 1945                              |
+| `--maxyear`                 | Maximum year of record's occurrences                    | `integer` | 2010                 |                                   |
 | `--coordprecision`          | Coordinate precision threshold, decimal degrees ^1^     | `number`  | 0.1                  | 0.1                               |
 | `--coorduncertainty`        | Maximum allowed coordinate uncertainty, meters ^1^      | `number`  | 10000                | 10000                             |
 | `--coorduncertaintyexclude` | Black list of coordinate uncertainty values ^1^         | `string`  | "9999"               | "301,3036,999,9999"               |
