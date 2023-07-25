@@ -54,7 +54,7 @@ Define which taxa should be analyzed.
 | Parameter        | Description                                                                                      | Type      | Example            | Default |
 | ---------------- | ------------------------------------------------------------------------------------------------ | --------- | ------------------ | ------- |
 | `--phylum`       | Phylum to analyze ^1^                                                                            | `string`  | "Chordata"         |         |
-| `--classis`      | Class to analyze ^1^                                                                             | `string`  | "Mammalia"         |         |
+| `--classis`      | Class to analyze ^1^ ^2^                                                                         | `string`  | "Mammalia"         |         |
 | `--order`        | Order to analyze ^1^                                                                             | `string`  | "Carnivora"        |         |
 | `--family`       | Family to analyze ^1^                                                                            | `string`  | "Felidae,Canidae"  |         |
 | `--genus`        | Genus to analyze ^1^                                                                             | `string`  | "Felis,Canis,Lynx" |         |
@@ -62,9 +62,12 @@ Define which taxa should be analyzed.
 | `--noextinct`    | File with extinct species specieskeys for their removal (file with a single column, with header) | `file`    | "Carnivora"        |         |
 | `--excludehuman` | Exclude genus "Homo" from occurrence data                                                        | `boolean` | True               | True    |
 
-^1^ Multiple comma-separated values allowed (e.g., "Felidae,Canidae" for the Family rank).  
+^1^: 
+    Multiple comma-separated values allowed (e.g., "Felidae,Canidae" for the Family rank).  
 
-Unfortunately, `class` is a reserved keyword in Nextflow. Therefore, Latin `classis` is used as a parameter name.
+^2^:
+    Unfortunately, `class` is a reserved keyword in Nextflow. 
+    Therefore, Latin `classis` is used as a parameter name.
 
 ## Spatial scope
 
