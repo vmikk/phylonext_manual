@@ -55,6 +55,31 @@ The output will contain all metrics estimated by these subroutines (`PD`, `PD_P`
 ^2^: 
     Must be specified with `--indices` parameter in the Phylonext pipeline.
 
+!!! info "* Hurlbert's ES index"
+    To activate the corresponding subroutine in Biodiverse and estimate the ES index, 
+    add `calc_hurlbert_es` to the `--indices` parameter (e.g., `--indices calc_richness,calc_pd,calc_hurlbert_es`).
+    It's important to note that the current implementation of Biodiverse uses a fixed set of ES values: 
+    5, 10, 20, 50, 100, 200, 500, 1000, 2000, 5000. 
+    The estimation of a specific index will largely depend on data availability from GBIF, 
+    so it can be challenging to anticipate whether a particular index can be estimated for a given taxon and area of interest.  
+    
+    In PhyloNext, we ensure that all available ES results are exported in a tabular format.  
+    If the user is looking to visualize this data on a map, they need to specify the index in the form 
+    `ES_x`, where `x` corresponds to one of the ES values supported by Biodiverse (e.g., `--leaflet_var RICHNESS_ALL,PD,ES_50,ES_100`).
+    
+    In its original formulation, the Hurlbert's  ES index requires the number of individuals per species.  
+    However, given the nature of GBIF data, we usually only have information on species occurrences.  
+    To overcome this limitation, we can replace the number of individuals with the number of records in the database.  
+    This substitution would slightly modify the **interpretation** of the index, 
+    and the ES index would correspond to **the number of unique species in a random sample of N occurrence records**.  
+    This is an approach that has been previously explored by John Waller 
+    [(link to blogpost)](https://data-blog.gbif.org/post/exploring-es50-for-gbif/).  
+    
+    For more information about the ES index, see:  
+    Hurlbert SH (1971) The Nonconcept of Species Diversity: A Critique and Alternative Parameters. Ecology, 52: 577-586. 
+    [DOI:10.2307/1934145](https://esajournals.onlinelibrary.wiley.com/doi/abs/10.2307/1934145)  
+
+
 ## Effect sizes
 
 Standardized effect sizes (SES; a.k.a. Z-scores) can be used to compare phylogenetic diversity of different communities. 
