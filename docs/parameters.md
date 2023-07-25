@@ -42,7 +42,7 @@ Define where the pipeline should find input data and save output data.
     If this option is chosen, the tips of the phylogenetic tree should be labeled 
     either with *Latin binomials* (for example, "Homo_sapiens"), 
     or with *Open Tree IDs* (for example, "ott359899"). 
-    Be sure to adjust the `--phylabels`` parameter accordingly.  
+    Be sure to adjust the [`--phylabels`](#Phylogenetic-tree-related-parameters) parameter accordingly.  
     Additionally, a set of phylogenetic trees, which come with descriptions and 
     are pre-packaged with the pipeline, are available at this link:  
     [https://github.com/vmikk/PhyloNext/tree/main/test_data/phy_trees](https://github.com/vmikk/PhyloNext/tree/main/test_data/phy_trees)  
