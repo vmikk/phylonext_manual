@@ -53,7 +53,8 @@ The output will contain all metrics estimated by these subroutines (`PD`, `PD_P`
     To visualize result on a map, provide the index name to the `--leaflet_var` parameter.
 
 ^2^: 
-    Must be specified with `--indices` parameter in the Phylonext pipeline.
+    Subroutines are specified with `--indices` parameter. 
+    Each subroutine should be specified only once.
 
 !!! info "* Hurlbert's ES index"
     To activate the corresponding subroutine in Biodiverse and estimate the ES index, 
