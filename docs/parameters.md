@@ -38,11 +38,14 @@ Define where the pipeline should find input data and save output data.
     Could be stored locally or in the cloud (S3 or Azure Blob storage).
 
 ^2^:
-    Optionally, user can supply a custom phylogenetic tree. 
-    In this case, tips of the phylogenetic should be labeled either 
-    with Latin binomials (e.g., "Homo_sapiens"), 
-    or with Open Tree IDs (e.g, "ott359899"). 
-    Please adjust the `--phylabels` parameter correspondingly. 
+    Users have the option to provide their own custom phylogenetic tree. 
+    If this option is chosen, the tips of the phylogenetic tree should be labeled 
+    either with *Latin binomials* (for example, "Homo_sapiens"), 
+    or with *Open Tree IDs* (for example, "ott359899"). 
+    Be sure to adjust the `--phylabels`` parameter accordingly.  
+    Additionally, a set of phylogenetic trees, which come with descriptions and 
+    are pre-packaged with the pipeline, are available at this link:  
+    [https://github.com/vmikk/PhyloNext/tree/main/test_data/phy_trees](https://github.com/vmikk/PhyloNext/tree/main/test_data/phy_trees)  
 
 ## Taxonomic scope
 
