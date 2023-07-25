@@ -47,6 +47,7 @@ The output will contain all metrics estimated by these subroutines (`PD`, `PD_P`
 | SHANNON_H      | Shannon's diversity index                                                                     | `calc_simpson_shannon`                   |
 | SHANNON_E      | Shannon's evenness                                                                            | `calc_simpson_shannon`                   |
 | SHANNON_HMAX   | Maximum possible value of Shannon's H                                                         | `calc_simpson_shannon`                   |
+| ES_x ^*^       | Hurlbert's ES index (a measure of species diversity that accounts for sample size)            | `calc_hurlbert_es`                       |
 
 ^1^: 
     To visualize result on a map, provide the index name to the `--leaflet_var` parameter.
