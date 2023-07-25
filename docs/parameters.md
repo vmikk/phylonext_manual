@@ -426,7 +426,8 @@ Interactive visualization depends on [Leaflet library](https://leafletjs.com/).
     it's important to specify the type of tip labels. 
     Currently, two labeling schemes are supported:
 
-- Latin binomials in `Genus_species` format (e.g., "Homo_sapiens"). NB! whitespace is not allowed!
+- Latin binomials in `Genus_species` format (e.g., "Homo_sapiens").  
+    NB! whitespaces in the name and sub-species ranks (variety, strain, form, etc.) are not allowed!
 - Open Tree of Life IDs (e.g., ["ott770315"](https://tree.opentreeoflife.org/taxonomy/browse?id=770315))
 
 ^2^:
