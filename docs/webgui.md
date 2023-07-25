@@ -6,7 +6,7 @@ description: >-
 
 To facilitate easy and efficient navigation for exploring the PhyloNext pipeline, 
 a user-friendly, web-based graphical user interface (GUI) has been developed 
-by Thomas Stjernegaard Jeppesen (https://github.com/thomasstjerne).  
+by [Thomas Stjernegaard Jeppesen](https://github.com/thomasstjerne).  
 
 The GUI is available at [**https://phylonext.gbif.org/**](https://phylonext.gbif.org/).  
 
